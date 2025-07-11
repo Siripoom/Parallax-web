@@ -1,32 +1,32 @@
+// src/components/ProductCard.jsx
 import Image from "next/image";
 
-const ProductCard = () => {
+// We pass props to make this component reusable
+const ProductCard = ({ imageSrc, title, description, imageClassName }) => {
   return (
-    // rounded-2xl: A large border radius
-    // shadow-lg: A nice, clean box shadow
-    // p-8: Padding
-    <div className="flex flex-col items-center rounded-2xl border border-gray-100 bg-white p-8 shadow-lg">
-      <Image
-        src="/product-bottle.png"
-        alt="AfterDent Mouthwash Product"
-        width={200}
-        height={200}
-        className="h-auto w-full max-w-[150px]"
-      />
+    <div className="flex flex-col items-center text-center">
+      {/* Image container with the circular background */}
+      <div className="relative mb-6 flex h-80 w-80 items-center justify-center">
+        {/* The pink circle */}
+        <div className="absolute inset-0 z-0 rounded-full bg-red-300/60"></div>
+        {/* The product image, using next/image for optimization */}
+        <div className={`relative z-10 ${imageClassName}`}>
+          <Image
+            src={imageSrc}
+            alt={title}
+            width={400}
+            height={400}
+            className="h-auto w-full object-contain"
+          />
+        </div>
 
-      {/* Placeholder lines using simple divs */}
-      <div className="my-6 flex w-4/5 flex-col gap-3">
-        <div className="h-2.5 w-full rounded-full bg-gray-200"></div>
-        <div className="h-2.5 w-full rounded-full bg-gray-200"></div>
-        <div className="h-2.5 w-3/4 rounded-full bg-gray-200"></div>
+        {/* ADD THE FAKE SHADOW DIV */}
+        <div className="absolute bottom-[-15px] z-0 h-10 w-3/5  rounded-full bg-red-500/40 blur-md"></div>
       </div>
 
-      <a
-        href="#"
-        className="rounded-full bg-brand-pink-light px-8 py-3 font-semibold text-brand-dark transition-transform hover:scale-105"
-      >
-        View more
-      </a>
+      {/* Text Content */}
+      <h3 className="mb-2 text-lg font-bold text-[#B32B23]">{title}</h3>
+      <p className="mb-6 max-w-xs text-sm  text-[#B32B23]">{description}</p>
     </div>
   );
 };

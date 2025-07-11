@@ -1,4 +1,7 @@
 @import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 .filter-to-white {
   filter: grayscale(100%) brightness(3);
