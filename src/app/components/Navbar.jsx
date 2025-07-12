@@ -27,10 +27,10 @@ const Navbar = () => {
   const navLinks = [
     { name: "Home", href: "#home" },
     { name: "Product", href: "#product" },
-    { name: "Review", href: "#" },
-    { name: "Our Story", href: "#" },
-    { name: "Service", href: "#" },
-    { name: "Contact", href: "#" },
+    { name: "Review", href: "#reviews" },
+    { name: "Our Story", href: "#about-us" },
+    { name: "Service", href: "#sales-channels" },
+    { name: "Contact", href: "#contact" },
   ];
 
   return (

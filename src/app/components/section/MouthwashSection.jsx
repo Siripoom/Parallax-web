@@ -65,7 +65,7 @@ const MouthwashSection = () => {
       id="mouthwash"
       className=" text-center flex flex-col justify-center  bg-[#EEE4E6]  relative overflow-hidden"
     >
-      <div className="mx-auto w-full max-w-6xl grid  grid-cols-1 md:grid-cols-2">
+      <div className="mx-auto w-full container grid  grid-cols-1 md:grid-cols-2">
         <div
           ref={imageColumnRef}
           className="relative flex h-screen items-center justify-center"
@@ -114,7 +114,7 @@ const MouthwashSection = () => {
             </div>
 
             {/* ADD THE FAKE SHADOW DIV */}
-            <div className="absolute bottom-[-100px] z-0 h-15 w-4/5  rounded-full bg-red-500/40 blur-md"></div>
+            <div className="absolute bottom-[-70px] z-0 h-10 w-4/5  rounded-full bg-black/30 blur-md"></div>
           </div>
         </div>
 

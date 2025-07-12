@@ -65,7 +65,7 @@ const ToothpasteSection = () => {
       id="mouthwash"
       className=" text-center flex flex-col justify-center bg-white relative overflow-hidden"
     >
-      <div className="mx-auto w-full max-w-6xl grid  grid-cols-1 md:grid-cols-2">
+      <div className="mx-auto w-full container grid  grid-cols-1 md:grid-cols-2">
         {/* === RIGHT COLUMN (Text Content) === */}
         {/* This column will scroll normally */}
         <div
@@ -177,7 +177,7 @@ const ToothpasteSection = () => {
             </div>
 
             {/* ADD THE FAKE SHADOW DIV */}
-            <div className="absolute bottom-[-100px] z-0 h-15 w-4/5  rounded-full bg-red-500/40 blur-md"></div>
+            <div className="absolute bottom-[-70px] z-0 h-10 w-4/5  rounded-full bg-black/30 blur-md"></div>
           </div>
         </div>
       </div>
