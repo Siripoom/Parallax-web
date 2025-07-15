@@ -97,9 +97,10 @@ const Hero = () => {
 
           <p
             ref={textRef}
-            className="mx-auto mt-4 text-4xl font-semibold leading-relaxed text-white/90 [text-shadow:2px_2px_4px_rgba(0,0,0,0.1)]"
+            sizes="100vw"
+            className="mx-auto mt-4 text-lg md:text-4xl  font-semibold leading-relaxed text-white/90 [text-shadow:2px_2px_4px_rgba(0,0,0,0.1)]"
           >
-            PRODUCT PRESENTATION 2025
+            สูตรที่หมอใช้ในห้องฟัน !
           </p>
         </div>
       </div>
