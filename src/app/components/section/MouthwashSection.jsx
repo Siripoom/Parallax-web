@@ -93,21 +93,21 @@ const MouthwashSection = () => {
             alt="Q10"
             width={190}
             height={190}
-            className="parallax-bubble absolute top-1/4 left-[-60px] z-0"
+            className="parallax-bubble absolute top-1/4 left-[-30px] md:left-20  z-0"
           />
           <Image
             src="/ingredients/Collagen.png"
             alt="Collagen"
             width={210}
             height={210}
-            className="parallax-bubble absolute bottom-1/4 left-[-120px] z-0"
+            className="parallax-bubble absolute bottom-1/4 left-[-120px] md:left-20  z-0"
           />
           <Image
             src="/ingredients/Hydroxy.png"
             alt="Hydroxyapatite"
             width={190}
             height={190}
-            className="parallax-bubble absolute top-2/3 left-12 z-0"
+            className="parallax-bubble absolute top-2/3 left-12  z-0"
           />
 
           {/* Static Slogans */}

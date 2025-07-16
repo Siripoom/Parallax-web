@@ -143,24 +143,24 @@ const ToothpasteSection = () => {
             alt="Q10"
             width={190}
             height={190}
-            className="parallax-bubble-tp absolute top-1/4 right-[-60px] z-0"
+            className="parallax-bubble-tp absolute top-1/4 md:right-20 right-[-60px] z-0"
           />
           <Image
             src="/ingredients/Fluoride.png"
             alt="Fluoride"
             width={210}
             height={210}
-            className="parallax-bubble-tp absolute bottom-1/4 right-[-120px] z-0"
+            className="parallax-bubble-tp absolute bottom-1/4 md:right-10 right-[-120px] z-0"
           />
           <Image
             src="/ingredients/Potassium.png"
             alt="Potassium"
             width={190}
             height={190}
-            className="parallax-bubble-tp absolute top-2/3 right-12 z-0"
+            className="parallax-bubble-tp absolute top-2/3 md:right-20 right-12 z-0"
           />
 
-          <div className="absolute bottom-20 z-5 flex items-center">
+          <div className="absolute  lg:bottom-10 z-5 flex items-center">
             <Image
               src="/slogan/alcohol.png"
               alt="Alcohol Free"
