@@ -136,7 +136,7 @@ const ReviewSection = () => {
       >
         <Masonry
           breakpointCols={breakpointColumnsObj}
-          className="my-masonry-grid" // Custom class for the container
+          className="my-masonry-grid " // Custom class for the container
           columnClassName="my-masonry-grid_column" // Custom class for the columns
         >
           {reviews.map((review) => (

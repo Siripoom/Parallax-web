@@ -78,7 +78,7 @@ const Hero = () => {
         setIsAnimating(true);
         gsap.to(window, {
           scrollTo: { y: section, autoKill: false },
-          duration: 1.5, // Slightly longer duration for a smoother feel
+          duration: 1, // Slightly longer duration for a smoother feel
           ease: "power3.inOut",
           onComplete: () => setIsAnimating(false),
         });
@@ -109,7 +109,7 @@ const Hero = () => {
         layout="fill"
         objectFit="cover"
         priority // Good for performance on the first-view image
-        className="-z-10"
+        className="-z-10 "
       />
       <div className="absolute inset-0 bg-red-300/60 -z-10"></div>
       <div className="absolute inset-0">
@@ -119,14 +119,14 @@ const Hero = () => {
           alt="Q10"
           width={120}
           height={120}
-          className="hero-bubble absolute top-[20%] left-[5%] md:left-[15%] w-20 md:w-50"
+          className="hero-bubble absolute top-[20%] left-[5%] md:left-[15%] w-40 md:w-50"
         />
         <Image
           src="/ingredients/Collagen.png"
           alt="Collagen"
           width={140}
           height={140}
-          className="hero-bubble absolute top-[45%] left-[-2%] md:left-[5%] w-24 md:w-45"
+          className="hero-bubble absolute top-[45%] left-[-2%] md:left-[5%] w-30 md:w-45"
           data-speed="1.2"
         />
         <Image
@@ -183,19 +183,19 @@ const Hero = () => {
           {/* Problem 2 Fix: Wrap the Image in a div and put the ref on the div */}
           <div ref={titleWrapperRef}>
             <Image
-              src="/hero/hero_text.png"
+              src="/logo/hero_logo.PNG"
               alt="Afterdent product collage"
-              width={0}
-              height={0}
+              width={10}
+              height={10}
               sizes="100vw"
-              className="w-full"
+              className="w-100 md:w-80 rounded-xl"
             />
           </div>
 
           <p
             ref={textRef}
             sizes="100vw"
-            className="mx-auto mt-4 text-lg md:text-4xl  font-semibold leading-relaxed text-white/90 [text-shadow:2px_2px_4px_rgba(0,0,0,0.1)]"
+            className="mx-auto mt-4 text-2xl md:text-4xl  font-semibold leading-relaxed text-white/90 [text-shadow:2px_2px_4px_rgba(0,0,0,0.1)]"
           >
             สูตรที่หมอใช้ในห้องฟัน !
           </p>

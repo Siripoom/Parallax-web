@@ -5,9 +5,43 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Image from "next/image";
 import IngredientCard from "../IngredientCard"; // Reusing the same components
+import PropertiesGraph from "../productElement/PropertiesGraph";
 import StoreButton from "../StoreButton";
+import ManualGraph from "../productElement/ManualGraph";
+import Link from "next/link";
 
 gsap.registerPlugin(ScrollTrigger);
+
+// After (with bgSrc property)
+const propertiesData = [
+  {
+    bgSrc: "/property/fresh.png", // Path to image in /public folder
+    points: ["ลดกลิ่นปาก", "ลมหายใจสดชื่น"],
+  },
+  {
+    bgSrc: "/property/protect.png", // Path to image in /public folder
+    points: ["เสริมความแข็งแรงให้ผิวเคลือบฟัน", "ป้องกันฟันผุ"],
+  },
+  {
+    bgSrc: "/property/bacteria.png", // Path to image in /public folder
+    points: ["ปลอบประโลมเหงือก", "ลดการอักเสบ"],
+  },
+];
+
+const manualTip = [
+  {
+    name: "1.บีบน้ำยาขึ้นมาอยู่ที่คอขวดแล้วปล่อยมือ น้ำยาบ้วนปากจะขึ้นมาประมาณ 10-15 มล. ซึ่งทำให้ประหยัดและเพียงพอต่อการบ้วนปากหนึ่งครั้ง",
+    src: "/products/mouthwash.png",
+  },
+  {
+    name: "2.กลั้วปากให้ทั่วประมาณ 30 วินาที แล้วบ้วนทิ้ง",
+    src: "/products/mouthwash.png",
+  },
+  {
+    name: "3.ปิดฝาให้สนิทลังใช้งานโดยใช้ วันละ 2 ครั้ง หลังการแปรงฟันหรือมื้ออาหาร",
+    src: "/products/mouthwash.png",
+  },
+];
 
 // --- Data for this specific component ---
 const ingredients = [
@@ -92,7 +126,7 @@ const ToothpasteSection = () => {
         {/* === SCROLLING LEFT COLUMN (Text Content) === */}
         <div
           ref={textColumnRef}
-          className="flex flex-col items-center justify-center gap-8 py-24 px-4 text-center"
+          className="flex flex-col order-2 md:order-1 items-center justify-center gap-8 py-24 px-4 text-center"
         >
           <div className="content-card-tp">
             <h1 className="text-3xl font-bold">Cranberry Delight Toothpaste</h1>
@@ -101,33 +135,173 @@ const ToothpasteSection = () => {
             </h2>
           </div>
 
-          <div className="grid grid-cols-1 gap-5 md:grid-cols-2">
-            {ingredients.map((item, index) => (
-              // Note the new class for unique targeting
-              <IngredientCard
-                key={index}
-                name={item.name}
-                description={item.description}
-                className="content-card-tp bg-gray-50"
-              />
-            ))}
+          <div className="infographic-section">
+            <PropertiesGraph data={propertiesData} />
           </div>
 
-          <div className="content-card-tp bg-gray-50 shadow-sm flex flex-col gap-3 rounded-2xl p-6 w-full">
-            <h2 className="mb-4 text-2xl font-bold">วิธีใช้งาน</h2>
-            <p className="text-left text-lg leading-relaxed">
-              ใช้แปรงฟันอย่างน้อยวันละ 2 ครั้ง หรือหลังอาหารทุกมื้อ
-              เพื่อสุขอนามัยที่ดีในช่องปาก
-            </p>
+          <div className="infographic-section">
+            <div>
+              <h3 className="mb-8 text-2xl font-bold text-red-700">ส่วนผสม</h3>
+              <div className="flex flex-col items-center gap-4">
+                {/* Top Row */}
+                <div className="flex justify-center gap-4">
+                  <div className="flex flex-col items-center  text-center">
+                    <Image
+                      src="/ingredients/glucoside.png"
+                      alt="glucoside"
+                      className="rounded-full opacity-75 my-3"
+                      width={90}
+                      height={90}
+                    />
+                    <p className="text-sm text-red-700 font-bold">Glucoside</p>
+                  </div>
+                  <div className="flex flex-col items-center text-center">
+                    <Image
+                      src="/ingredients/mineralWater.png"
+                      alt="ALOE VERA EXTRACT"
+                      className="rounded-full opacity-75 my-3"
+                      width={90}
+                      height={90}
+                    />
+                    <p className="text-sm text-red-700 font-bold">
+                      mineralWater
+                    </p>
+                  </div>
+                  <div className="flex flex-col items-center text-center">
+                    <Image
+                      src="/ingredients/paperMint.png"
+                      alt="CRANBERRY EXTRACT"
+                      className="rounded-full opacity-75 my-3"
+                      width={90}
+                      height={90}
+                    />
+                    <p className="text-sm text-red-700 font-bold">PepperMint</p>
+                  </div>
+                </div>
+                {/* Bottom Row */}
+                <div className="flex justify-center gap-4">
+                  <div className="flex flex-col items-center text-center">
+                    <Image
+                      src="/ingredients/eucalyptol.png"
+                      alt="Q10"
+                      className="rounded-full opacity-75 my-3"
+                      width={90}
+                      height={90}
+                    />
+                    <p className="text-sm text-red-700 font-bold">
+                      HYDROXYAPATITE
+                    </p>
+                  </div>
+                  <div className="flex flex-col items-center text-center">
+                    <Image
+                      src="/ingredients/spearMint.png"
+                      alt="VITAMIN C"
+                      className="rounded-full opacity-75 my-3"
+                      width={90}
+                      height={90}
+                    />
+                    <p className="text-sm text-red-700 font-bold">VITAMIN C</p>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
 
-          <div className="content-card-tp bg-gray-50 shadow-sm flex w-full max-w-md flex-col items-center gap-4 rounded-2xl p-6">
-            <h2 className="text-2xl font-bold">ช่องทางการสั่งซื้อ</h2>
+          <div className="infographic-section">
+            <div>
+              <h3 className="mb-8 text-2xl font-bold text-red-700">สารสกัด</h3>
+              <div className="flex flex-col items-center gap-4">
+                {/* Top Row */}
+                <div className="flex justify-center gap-4">
+                  <div className="flex flex-col items-center  text-center">
+                    <Image
+                      src="/icon/mouthwash/extract/Q10.png"
+                      alt="Q10"
+                      className="rounded-full opacity-75 my-3"
+                      width={90}
+                      height={90}
+                    />
+                    <p className="text-sm text-red-700 font-bold">
+                      Coenzyme Q10
+                    </p>
+                    <p>เพิ่มความชุ่มชื้น เร่งสมานแผลและสร้างคอลลาเจน</p>
+                  </div>
+                  <div className="flex flex-col items-center text-center">
+                    <Image
+                      src="/icon/mouthwash/extract/Aloe.png"
+                      alt="ALOE VERA EXTRACT"
+                      className="rounded-full opacity-75 my-3"
+                      width={90}
+                      height={90}
+                    />
+                    <p className="text-sm text-red-700 font-bold">
+                      ALOE VERA EXTRACT
+                    </p>
+                    <p>ลดการอักเสบ ปลอบประโลมเนื้อเยื่อ ในช่องปาก</p>
+                  </div>
+                  <div className="flex flex-col items-center text-center">
+                    <Image
+                      src="/icon/mouthwash/extract/cranBerry.png"
+                      alt="CRANBERRY EXTRACT"
+                      className="rounded-full opacity-75 my-3"
+                      width={90}
+                      height={90}
+                    />
+                    <p className="text-sm text-red-700 font-bold">
+                      CRANBERRY EXTRACT
+                    </p>
+                    <p>ช่วยยับยั้งการเกาะของแบคทีเรียบนผิวฟัน</p>
+                  </div>
+                </div>
+                {/* Bottom Row */}
+                <div className="flex justify-center gap-4">
+                  <div className="flex flex-col items-center text-center">
+                    <Image
+                      src="/icon/mouthwash/extract/Hydro.png"
+                      alt="Q10"
+                      className="rounded-full opacity-75 my-3"
+                      width={90}
+                      height={90}
+                    />
+                    <p className="text-sm text-red-700 font-bold">
+                      HYDROXYAPATITE
+                    </p>
+                    <p>ลดเสียวฟัน และเสริมความแข็งแรงให้ ผิวเคลือบฟัน</p>
+                  </div>
+                  <div className="flex flex-col items-center text-center">
+                    <Image
+                      src="/icon/mouthwash/extract/vitC.png"
+                      alt="VITAMIN C"
+                      className="rounded-full opacity-75 my-3"
+                      width={90}
+                      height={90}
+                    />
+                    <p className="text-sm text-red-700 font-bold">VITAMIN C</p>
+                    <p>ลดการอักเสบ ป้องกันเลือดออกตามไรฟัน</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="grid  gap-4">
+            <ManualGraph data={manualTip} />
+          </div>
+
+          <div className="content-card bg-white/50 shadow-sm flex w-full max-w-md flex-col items-center gap-4 rounded-2xl p-6">
+            <h2 className="text-2xl font-bold rounded-full p-3 bg-red-700  text-white">
+              ช่องทางการสั่งซื้อ
+            </h2>
             <div className="grid grid-cols-2 gap-4">
               {onlineStores.map((store) => (
                 <StoreButton key={store.alt} {...store} />
               ))}
             </div>
+            <Link href="#sales-channels" class="flex items-center my-6 w-full">
+              <hr class="flex-grow border-t-2 border-gray-400" />
+              <p class="mx-4 text-gray-700 whitespace-nowrap">ช่องทางอื่น ๆ</p>
+              <hr class="flex-grow border-t-2 border-gray-400" />
+            </Link>
           </div>
         </div>
 
@@ -135,7 +309,7 @@ const ToothpasteSection = () => {
         {/* We use `md:order-last` to ensure it's the second column on desktop */}
         <div
           ref={imageColumnRef}
-          className="relative flex h-screen items-center justify-center md:order-last"
+          className="order-1 md:order-2 relative flex h-screen items-center justify-center md:order-last"
         >
           {/* Parallax Bubbles */}
           <Image
@@ -160,7 +334,30 @@ const ToothpasteSection = () => {
             className="parallax-bubble-tp absolute top-2/3 md:right-20 right-12 z-0"
           />
 
-          <div className="absolute  lg:bottom-10 z-5 flex items-center">
+          <Image
+            src="/ingredients/Alchoholfree.png"
+            alt="Alcohol Free"
+            width={210}
+            height={210}
+            className="parallax-bubble absolute  bottom-1/4 left-[-120px] md:left-20  z-0"
+          />
+          <Image
+            src="/ingredients/Aloevera.png"
+            alt="Alore Vera"
+            width={190}
+            height={190}
+            className="parallax-bubble absolute mt-10 top-2/3 left-12  z-0"
+          />
+
+          <Image
+            src="/ingredients/Craneberry.png"
+            alt="Craneberry"
+            width={190}
+            height={190}
+            className="parallax-bubble absolute  top-1/4 left-[-30px] md:left-20  z-0"
+          />
+
+          <div className="absolute bottom-40  lg:bottom-10 z-5 flex items-center">
             <Image
               src="/slogan/alcohol.png"
               alt="Alcohol Free"

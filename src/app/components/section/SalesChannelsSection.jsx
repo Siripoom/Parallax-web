@@ -35,18 +35,22 @@ const SalesChannelsSection = () => {
     {
       name: "Gourmet Market",
       logoSrc: "/channels/gourmet_market.jpg",
-      link: "",
+      link: "https://gourmetmarketthailand.com/store-location?srsltid=AfmBOookYrRqjkpbmhR8bSz-0et_-FGeaGg_UPfV7JnrLhH1cs0o3GHD",
     },
     {
       name: "ร้านยากรุงเทพ",
       logoSrc: "/channels/bangkokPhamacine.png",
-      link: "",
+      link: "https://www.bangkokdrugstore.co.th/branch-search.php",
     },
-    { name: "Savedrug", logoSrc: "/channels/saveDrug.jpg", link: "#" },
     {
-      name: "LDC ทุกสาขา",
+      name: "Savedrug",
+      logoSrc: "/channels/saveDrug.jpg",
+      link: "https://www.savedrug.co.th/location",
+    },
+    {
+      name: "LDC Dental ทุกสาขา",
       logoSrc: "/channels/LDC.jpg",
-      link: "",
+      link: "https://www.ldcdental.com/branch/",
     },
   ];
 
@@ -62,9 +66,9 @@ const SalesChannelsSection = () => {
       link: "https://www.lazada.co.th/shop/ldc-online-store/?spm=a2o4m.pdp_revamp.seller.1.27bd4a64kNsB0Y&itemId=5463603820&channelSource=pdp",
     },
     {
-      name: "LDC Store",
-      logoSrc: "/channels/online/LDCOnline.png",
-      link: "https://www.ldcdental.com/2025/03/05/10baht/",
+      name: "LDC Tiktok shop",
+      logoSrc: "/channels/LDC.jpg",
+      link: "https://www.tiktok.com/@ldcdental?_t=ZS-8y9hGxx8suQ&_r=1",
     },
   ];
 

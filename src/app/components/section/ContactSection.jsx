@@ -104,7 +104,7 @@ const ContactSection = () => {
   ];
 
   return (
-    <footer ref={sectionRef} id="contact" className="  pt-24 pb-12">
+    <footer ref={sectionRef} id="contact" className="p-5   pt-24 pb-12">
       <div className="mx-auto w-full max-w-6xl ">
         {/* Title */}
         <div className="contact-anim text-center mb-16">

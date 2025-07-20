@@ -16,7 +16,9 @@ const ChannelCard = ({ name, logoSrc, link, logoClassName }) => {
             alt={`${name} Logo`}
             width={400}
             height={400}
-            className={`object-contain ${logoClassName || "h-40 w-auto"}`}
+            className={`object-contain ${
+              logoClassName || "h-40 w-auto rounded-lg"
+            }`}
           />
         </div>
 
