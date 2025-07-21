@@ -11,37 +11,6 @@ import ManualGraph from "../productElement/ManualGraph";
 
 gsap.registerPlugin(ScrollTrigger);
 
-// --- Data for the component ---
-// This makes the JSX much cleaner and easier to manage.
-const extracts = [
-  {
-    name: "COENZYME Q10",
-    description: "เพิ่มความชุ่มชื้น เร่งสมานแผลและสร้างคอลลาเจน",
-    src: "/icon/mouthwash/extract/Aloe.png",
-  },
-  {
-    name: "ALOE VERA EXTRACT",
-    description: "ลดการอักเสบ ปลอบประโลมเนื้อเยื่อ ในช่องปาก",
-    src: "/icon/mouthwash/extract/",
-  },
-  {
-    name: "CRANBERRY EXTRACT",
-    description:
-      "Jans PROANTHOCYANIDINS (PACS) ที่ช่วยยับยั้งการเกาะของแบคทีเรียบนผิวฟัน",
-    src: "",
-  },
-  {
-    name: "HYDROXYAPATITE",
-    description: "ลดเสียวฟัน และเสริมความแข็งแรงให้ ผิวเคลือบฟัน",
-    src: "",
-  },
-  {
-    name: "VITAMIN C",
-    description: "ลดการอักเสบ ป้องกันเลือดออกตามไรฟัน",
-    src: "",
-  },
-];
-
 // After (with bgSrc property)
 const propertiesData = [
   {
