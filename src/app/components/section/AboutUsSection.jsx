@@ -51,8 +51,8 @@ const AboutUsSection = () => {
   }, []);
 
   return (
-    <section ref={sectionRef} id="about-us" className="p-5  py-24 bg-white">
-      <div className="container mx-auto text-center">
+    <section ref={sectionRef} id="about-us" className="p-5 py-24 bg-white">
+      <div className="mx-auto w-full max-w-6xl mx-auto text-center">
         {/* --- Title --- */}
         <div className="about-us-anim">
           <h2 className="text-4xl font-extrabold uppercase text-brand-orange">
@@ -69,7 +69,7 @@ const AboutUsSection = () => {
             <div key={index} className="flex flex-col items-center text-center">
               {/* Icon is placed here */}
               <div className="mb-4">{point.icon}</div>
-              <p className="text-gray-600">{point.text}</p>
+              <p className="text-gray-600 text-xl">{point.text}</p>
             </div>
           ))}
         </div>
@@ -100,7 +100,7 @@ const AboutUsSection = () => {
           </div>
         </div>
         <div className="about-us-anim mt-20 text-end  mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 text-gray-700">
+          <div className="grid grid-cols-1 md:grid-cols-2  gap-8 text-gray-700">
             <Image
               src="/about/toothPaste.JPG"
               alt="Dentist with patient"

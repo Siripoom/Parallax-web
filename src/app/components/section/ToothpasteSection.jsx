@@ -89,28 +89,24 @@ const ToothpasteSection = () => {
 
   useLayoutEffect(() => {
     const ctx = gsap.context(() => {
-      // --- THE PINNING & PARALLAX ANIMATION ---
+      // --- THE PINNING & PARALLAX ANIMATION (remains the same) ---
       const timeline = gsap.timeline({
         scrollTrigger: {
           trigger: mainRef.current,
           start: "top top",
-          end: `+=${textColumnRef.current.offsetHeight}`,
+          end: `+=${textColumnRef.current.offsetHeight}`, // End after the text column has fully scrolled
           pin: imageColumnRef.current,
           scrub: 1,
         },
       });
 
-      // Animate bubbles - note the classes are the same for reusability
+      // Animate bubbles based on the main timeline
       timeline.fromTo(
-        ".parallax-bubble-tp",
+        ".parallax-bubble",
         { yPercent: (i) => 80 + i * 20 },
         { yPercent: (i) => -40 - i * 10, ease: "none", stagger: 0.1 },
         0
       );
-
-      // --- CONTENT FADE-IN ANIMATION ---
-      // We use the same animation logic as the mouthwash section
-      const contentCards = gsap.utils.toArray(".content-card-tp");
     }, mainRef);
     return () => ctx.revert();
   }, []);
@@ -264,9 +260,24 @@ const ToothpasteSection = () => {
                       height={90}
                     />
                     <p className="text-sm text-red-700 font-bold">
-                      HYDROXYAPATITE
+                      POTASSIUM NITRATE
                     </p>
-                    <p>ลดเสียวฟัน และเสริมความแข็งแรงให้ ผิวเคลือบฟัน</p>
+                    <p>
+                      สารสําคัญที่ช่วยลดอาการ เสียวฟัน ได้อย่างมีประสิทธิภาพ
+                    </p>
+                  </div>
+                  <div className="flex flex-col items-center text-center">
+                    <Image
+                      src="/icon/mouthwash/extract/Hydro.png"
+                      alt="Q10"
+                      className="rounded-full opacity-75 my-3"
+                      width={90}
+                      height={90}
+                    />
+                    <p className="text-sm text-red-700 font-bold">
+                      SODIUM CHLORIDE
+                    </p>
+                    <p>ลดการอักเสบและช่วยกระชับเหงือก</p>
                   </div>
                   <div className="flex flex-col items-center text-center">
                     <Image
@@ -317,21 +328,21 @@ const ToothpasteSection = () => {
             alt="Q10"
             width={190}
             height={190}
-            className="parallax-bubble-tp absolute top-1/4 md:right-20 right-[-60px] z-0"
+            className="parallax-bubble absolute top-1/4 md:right-20 right-[-60px] z-0"
           />
           <Image
             src="/ingredients/Fluoride.png"
             alt="Fluoride"
             width={210}
             height={210}
-            className="parallax-bubble-tp absolute bottom-1/4 md:right-10 right-[-120px] z-0"
+            className="parallax-bubble absolute bottom-1/4 md:right-10 right-[-120px] z-0"
           />
           <Image
             src="/ingredients/Potassium.png"
             alt="Potassium"
             width={190}
             height={190}
-            className="parallax-bubble-tp absolute top-2/3 md:right-20 right-12 z-0"
+            className="parallax-bubble absolute top-2/3 md:right-20 right-12 z-0"
           />
 
           <Image
@@ -339,7 +350,7 @@ const ToothpasteSection = () => {
             alt="Alcohol Free"
             width={210}
             height={210}
-            className="parallax-bubble absolute  bottom-1/4 left-[-120px] md:left-20  z-0"
+            className="parallax-bubble absolute top-2/4 left-[-120px] md:left-20  z-0"
           />
           <Image
             src="/ingredients/Aloevera.png"
@@ -354,7 +365,7 @@ const ToothpasteSection = () => {
             alt="Craneberry"
             width={190}
             height={190}
-            className="parallax-bubble absolute  top-1/4 left-[-30px] md:left-20  z-0"
+            className="parallax-bubble absolute  top-4/4 left-[-30px] md:left-20  z-0"
           />
 
           <div className="absolute bottom-40  lg:bottom-10 z-5 flex items-center">

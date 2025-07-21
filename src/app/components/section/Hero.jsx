@@ -185,10 +185,10 @@ const Hero = () => {
             <Image
               src="/logo/hero_logo.PNG"
               alt="Afterdent product collage"
-              width={10}
-              height={10}
+              width={30}
+              height={30}
               sizes="100vw"
-              className="w-100 md:w-80 rounded-xl"
+              className="w-100 md:w-full rounded-xl"
             />
           </div>
 
