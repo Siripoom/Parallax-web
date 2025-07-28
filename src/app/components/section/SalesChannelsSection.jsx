@@ -56,18 +56,18 @@ const SalesChannelsSection = () => {
 
   const onlineChannels = [
     {
-      name: "Shopee",
+      name: "LDC Store Shopee",
       logoSrc: "/channels/online/shoppee.png",
       link: "https://shopee.co.th/ldconlinestore?categoryId=100001&entryPoint=ShopByPDP&itemId=12024470629",
     },
     {
-      name: "Lazada",
+      name: "LDC Store Lazada",
       logoSrc: "/channels/online/lazada.png",
       link: "https://www.lazada.co.th/shop/ldc-online-store/?spm=a2o4m.pdp_revamp.seller.1.27bd4a64kNsB0Y&itemId=5463603820&channelSource=pdp",
     },
     {
       name: "LDC Tiktok shop",
-      logoSrc: "/channels/LDC.jpg",
+      logoSrc: "/channels/online/tiktok.jpg",
       link: "https://www.tiktok.com/@ldcdental?_t=ZS-8y9hGxx8suQ&_r=1",
     },
   ];

@@ -125,17 +125,17 @@ const ProductSection = () => {
           </div>
           <div ref={retainerWashCardRef}>
             <ProductCard
-              productUrl="https://shopee.co.th/%E0%B8%81%E0%B8%A5%E0%B9%88%E0%B8%AD%E0%B8%87%E0%B9%81%E0%B8%8A%E0%B9%88%E0%B8%A3%E0%B8%B5%E0%B9%80%E0%B8%97%E0%B8%99%E0%B9%80%E0%B8%99%E0%B8%AD%E0%B8%A3%E0%B9%8C-AFTERDENT-%E0%B8%9E%E0%B8%A3%E0%B8%B5%E0%B9%80%E0%B8%A1%E0%B8%B5%E0%B9%88%E0%B8%A2%E0%B8%A1-%E0%B8%AA%E0%B8%B5%E0%B8%94%E0%B8%B3-%E0%B8%9F%E0%B9%89%E0%B8%B2-%E0%B8%AA%E0%B9%89%E0%B8%A1--i.135011894.26624718928"
+              productUrl="https://shopee.co.th/%E0%B8%81%E0%B8%A5%E0%B9%88%E0%B8%AD%E0%B8%87%E0%B9%83%E0%B8%AA%E0%B9%88%E0%B8%A3%E0%B8%B5%E0%B9%80%E0%B8%97%E0%B8%99%E0%B9%80%E0%B8%99%E0%B8%AD%E0%B8%A3%E0%B9%8C-%E0%B9%81%E0%B8%A5%E0%B8%B0%E0%B8%AD%E0%B8%B8%E0%B8%9B%E0%B8%81%E0%B8%A3%E0%B8%93%E0%B9%8C%E0%B8%88%E0%B8%B1%E0%B8%94%E0%B8%9F%E0%B8%B1%E0%B8%99%E0%B9%83%E0%B8%AA-AFTERDENT-%E0%B8%9E%E0%B8%A3%E0%B8%B5%E0%B9%80%E0%B8%A1%E0%B8%B5%E0%B8%A2%E0%B8%A1-i.135011894.24413737742"
               imageSrc="/products/retainerWash.png"
-              title="เม็ดฟู่ทำความสะอาดรีเทนเนอร์"
+              title="กล่องใส่รีเทนเนอร์และอุปกรณ์จัดฟันใส AFTERDENT พรีเมี่ยม"
               imageClassName="w-70"
             />
           </div>
           <div ref={retainerWaterBoxCardRef}>
             <ProductCard
-              productUrl="https://shopee.co.th/buyer/login?fu_tracking_id=808c8391e8e-8615-4e79-a4a6-661087777992&next=https%3A%2F%2Fshopee.co.th%2F%25E0%25B8%2581%25E0%25B8%25A5%25E0%25B9%2588%25E0%25B8%25AD%25E0%25B8%2587%25E0%25B9%2583%25E0%25B8%25AA%25E0%25B9%2588%25E0%25B8%25A3%25E0%25B8%25B5%25E0%25B9%2580%25E0%25B8%2597%25E0%25B8%2599%25E0%25B9%2580%25E0%25B8%2599%25E0%25B8%25AD%25E0%25B8%25A3%25E0%25B9%258C-%25E0%25B9%2581%25E0%25B8%25A5%25E0%25B8%25B0%25E0%25B8%25AD%25E0%25B8%25B8%25E0%25B8%259B%25E0%25B8%2581%25E0%25B8%25A3%25E0%25B8%2593%25E0%25B9%258C%25E0%25B8%2588%25E0%25B8%25B1%25E0%25B8%2594%25E0%25B8%259F%25E0%25B8%25B1%25E0%25B8%2599%25E0%25B9%2583%25E0%25B8%25AA-AFTERDENT-%25E0%25B8%259E%25E0%25B8%25A3%25E0%25B8%25B5%25E0%25B9%2580%25E0%25B8%25A1%25E0%25B8%25B5%25E0%25B8%25A2%25E0%25B8%25A1-i.135011894.24413737742"
+              productUrl="https://shopee.co.th/%E0%B8%81%E0%B8%A5%E0%B9%88%E0%B8%AD%E0%B8%87%E0%B9%81%E0%B8%8A%E0%B9%88%E0%B8%A3%E0%B8%B5%E0%B9%80%E0%B8%97%E0%B8%99%E0%B9%80%E0%B8%99%E0%B8%AD%E0%B8%A3%E0%B9%8C-AFTERDENT-%E0%B8%9E%E0%B8%A3%E0%B8%B5%E0%B9%80%E0%B8%A1%E0%B8%B5%E0%B9%88%E0%B8%A2%E0%B8%A1-%E0%B8%AA%E0%B8%B5%E0%B8%94%E0%B8%B3-%E0%B8%9F%E0%B9%89%E0%B8%B2-%E0%B8%AA%E0%B9%89%E0%B8%A1--i.135011894.26624718928"
               imageSrc="/products/retainerWaterBox.png"
-              title="แก้วแช่รีเทนเนอร์"
+              title="กล่องแช่รีเทนเนอร์ AFTERDENT พรีเมี่ยม"
               imageClassName="w-70"
             />
           </div>
@@ -143,7 +143,7 @@ const ProductSection = () => {
             <ProductCard
               productUrl="https://shopee.co.th/%E0%B8%99%E0%B9%89%E0%B8%B3%E0%B8%A2%E0%B8%B2%E0%B8%9A%E0%B9%89%E0%B8%A7%E0%B8%99%E0%B8%9B%E0%B8%B2%E0%B8%81-AFTERDENT-%E0%B8%AA%E0%B8%94%E0%B8%8A%E0%B8%B7%E0%B9%88%E0%B8%99-%E0%B8%A5%E0%B8%94%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%A3%E0%B8%B0%E0%B8%9A%E0%B8%A1%E0%B8%82%E0%B8%AD%E0%B8%87%E0%B8%9A%E0%B8%B2%E0%B8%94%E0%B9%81%E0%B8%9C%E0%B8%A5%E0%B9%83%E0%B8%99%E0%B8%8A%E0%B9%88%E0%B8%AD%E0%B8%87%E0%B8%9B%E0%B8%B2%E0%B8%81-%E0%B8%81%E0%B8%A5%E0%B8%B4%E0%B9%88%E0%B8%99%E0%B9%81%E0%B8%84%E0%B8%A3%E0%B8%99%E0%B9%80%E0%B8%9A%E0%B8%AD%E0%B8%A3%E0%B8%B5%E0%B9%88-%E0%B8%A1%E0%B8%B4%E0%B8%99%E0%B8%97%E0%B9%8C--i.135011894.2395811065"
               imageSrc="/products/mouthwashCranBerryandMint.png"
-              title="น้ำยาบ้วนปาก CRANBERRY & MINT"
+              title="น้ำยาบ้วนปาก AFTERDENT Cranberry&Mint"
               imageClassName="w-70"
             />
           </div>

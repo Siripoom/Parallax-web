@@ -6,6 +6,7 @@ import ReviewSection from "./components/section/ReviewSection";
 import AboutUsSection from "./components/section/AboutUsSection";
 import SalesChannelsSection from "./components/section/SalesChannelsSection";
 import ContactSection from "./components/section/ContactSection";
+import PromoSection from "./components/section/PromoSection";
 import Footer from "./components/section/Footer";
 
 export default function HomePage() {

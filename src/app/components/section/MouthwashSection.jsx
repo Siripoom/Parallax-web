@@ -188,11 +188,8 @@ const MouthwashSection = () => {
         >
           <div className="content-card">
             <h1 className="text-3xl font-bold">
-              Mouthwash AFTERDENT Cranberry Flavour 500 ml.
+              AFTERDENT Cranberry Mouthwash Flavour 500 ml.
             </h1>
-            <h2 className="mt-2 text-2xl font-bold">
-              น้ำยาบ้วนปากขนาด 500 มิลลิลิตร
-            </h2>
           </div>
 
           <div className="infographic-section">
@@ -202,74 +199,6 @@ const MouthwashSection = () => {
           <div className="infographic-section">
             <div>
               <h3 className="mb-8 text-2xl font-bold text-red-700">ส่วนผสม</h3>
-              <div className="flex flex-col items-center gap-4">
-                {/* Top Row */}
-                <div className="flex justify-center gap-4">
-                  <div className="flex flex-col items-center  text-center">
-                    <Image
-                      src="/ingredients/glucoside.png"
-                      alt="glucoside"
-                      className="rounded-full opacity-75 my-3"
-                      width={90}
-                      height={90}
-                    />
-                    <p className="text-sm text-red-700 font-bold">Glucoside</p>
-                  </div>
-                  <div className="flex flex-col items-center text-center">
-                    <Image
-                      src="/ingredients/mineralWater.png"
-                      alt="ALOE VERA EXTRACT"
-                      className="rounded-full opacity-75 my-3"
-                      width={90}
-                      height={90}
-                    />
-                    <p className="text-sm text-red-700 font-bold">
-                      mineralWater
-                    </p>
-                  </div>
-                  <div className="flex flex-col items-center text-center">
-                    <Image
-                      src="/ingredients/paperMint.png"
-                      alt="CRANBERRY EXTRACT"
-                      className="rounded-full opacity-75 my-3"
-                      width={90}
-                      height={90}
-                    />
-                    <p className="text-sm text-red-700 font-bold">PepperMint</p>
-                  </div>
-                </div>
-                {/* Bottom Row */}
-                <div className="flex justify-center gap-4">
-                  <div className="flex flex-col items-center text-center">
-                    <Image
-                      src="/ingredients/eucalyptol.png"
-                      alt="Q10"
-                      className="rounded-full opacity-75 my-3"
-                      width={90}
-                      height={90}
-                    />
-                    <p className="text-sm text-red-700 font-bold">
-                      HYDROXYAPATITE
-                    </p>
-                  </div>
-                  <div className="flex flex-col items-center text-center">
-                    <Image
-                      src="/ingredients/spearMint.png"
-                      alt="VITAMIN C"
-                      className="rounded-full opacity-75 my-3"
-                      width={90}
-                      height={90}
-                    />
-                    <p className="text-sm text-red-700 font-bold">VITAMIN C</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div className="infographic-section">
-            <div>
-              <h3 className="mb-8 text-2xl font-bold text-red-700">สารสกัด</h3>
               <div className="flex flex-col items-center gap-4">
                 {/* Top Row */}
                 <div className="flex justify-center gap-4">
@@ -312,9 +241,6 @@ const MouthwashSection = () => {
                     </p>
                     <p>ช่วยยับยั้งการเกาะของแบคทีเรียบนผิวฟัน</p>
                   </div>
-                </div>
-                {/* Bottom Row */}
-                <div className="flex justify-center gap-4">
                   <div className="flex flex-col items-center text-center">
                     <Image
                       src="/icon/mouthwash/extract/Hydro.png"
@@ -327,17 +253,6 @@ const MouthwashSection = () => {
                       HYDROXYAPATITE
                     </p>
                     <p>ลดเสียวฟัน และเสริมความแข็งแรงให้ ผิวเคลือบฟัน</p>
-                  </div>
-                  <div className="flex flex-col items-center text-center">
-                    <Image
-                      src="/icon/mouthwash/extract/vitC.png"
-                      alt="VITAMIN C"
-                      className="rounded-full opacity-75 my-3"
-                      width={90}
-                      height={90}
-                    />
-                    <p className="text-sm text-red-700 font-bold">VITAMIN C</p>
-                    <p>ลดการอักเสบ ป้องกันเลือดออกตามไรฟัน</p>
                   </div>
                 </div>
               </div>

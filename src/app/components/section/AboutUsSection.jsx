@@ -6,6 +6,7 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Image from "next/image";
 import { Beaker, ShieldCheck, HeartPulse } from "lucide-react";
+import MaskedText from "../MaskedText"; // Import our new component
 
 // ... inside your component's return statement ...
 
@@ -74,6 +75,21 @@ const AboutUsSection = () => {
           ))}
         </div>
 
+        <MaskedText
+          text="AFTERDENT"
+          imageSrc="/about/aboutText.JPG" // The image you want inside the text
+        />
+
+        <div className="about-us-image flex items-center justify-center">
+          <Image
+            src="/about/brand.png"
+            alt="Dentist with patient"
+            width={400}
+            height={400}
+            className="rounded-lg w-full  shadow-lg ml-auto"
+          />
+        </div>
+
         {/* --- Value Proposition Text --- */}
         <div className="about-us-anim mt-20 text-left  mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 text-gray-700">
@@ -111,7 +127,7 @@ const AboutUsSection = () => {
             <div className="flex flex-col justify-center items-center">
               <h3 className="text-3xl font-bold  mb-8">
                 <span className="text-brand-green text-3xl">
-                  AFTERDENT Cranberry Mouthwash
+                  AFTERDENT Cranberry Delight Toothpaste
                 </span>
               </h3>
               <p className="text-xl text-start">
