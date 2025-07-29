@@ -4,10 +4,8 @@ import { useRef, useLayoutEffect } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Image from "next/image";
-import IngredientCard from "../IngredientCard"; // Reusing the same components
 import PropertiesGraph from "../productElement/PropertiesGraph";
 import StoreButton from "../StoreButton";
-import ManualGraph from "../productElement/ManualGraph";
 import Link from "next/link";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -89,43 +87,70 @@ const ToothpasteSection = () => {
 
   useLayoutEffect(() => {
     const ctx = gsap.context(() => {
-      const bubbles = gsap.utils.toArray(".parallax-bubble");
+      // Use ScrollTrigger's matchMedia for responsive animations
+      ScrollTrigger.matchMedia({
+        // --- DESKTOP ANIMATIONS ---
+        "(min-width: 768px)": () => {
+          const bubbles = gsap.utils.toArray(".parallax-bubble");
 
-      // --- Bubble Entry Animation (Triggers on First Sight) ---
-      gsap.set(bubbles, { opacity: 0, scale: 0.8 });
+          // 1. Bubble Entry/Exit Animation for Desktop
+          const bubbleEntryTl = gsap.timeline({ paused: true });
+          bubbleEntryTl.from(bubbles, {
+            opacity: 0,
+            scale: 0.8,
+            y: 50,
+            duration: 1.2,
+            ease: "power3.out",
+            stagger: { each: 0.1, from: "random" },
+          });
 
-      // The only change is the ScrollTrigger's `start` property
-      gsap.to(bubbles, {
-        opacity: 1,
-        scale: 1,
-        duration: 1.5,
-        ease: "power3.out",
-        stagger: {
-          each: 0.2,
-          from: "random",
+          ScrollTrigger.create({
+            trigger: mainRef.current,
+            start: "top 80%",
+            end: "bottom 20%",
+            animation: bubbleEntryTl,
+            toggleActions: "play reverse play reverse",
+          });
+
+          // 2. The Pinning & Parallax Timeline for Desktop
+          const pinningTl = gsap.timeline({
+            scrollTrigger: {
+              trigger: mainRef.current,
+              start: "top top",
+              end: `+=${textColumnRef.current.offsetHeight}`,
+              pin: imageColumnRef.current,
+              scrub: 1.5, // A slightly slower scrub can feel more premium
+            },
+          });
         },
-        scrollTrigger: {
-          trigger: mainRef.current,
-          // THIS IS THE KEY: "top bottom" means the animation starts
-          // the moment the top of the section hits the bottom of the viewport.
-          start: "top bottom-=100px", // Starts 100px before it's fully in view
-          toggleActions: "play reverse play reverse",
-        },
-      });
 
-      // --- THE PINNING & PARALLAX ANIMATION (Unchanged) ---
-      const timeline = gsap.timeline({
-        scrollTrigger: {
-          trigger: mainRef.current,
-          start: "top top",
-          end: `+=${textColumnRef.current.offsetHeight}`,
-          pin: imageColumnRef.current,
-          scrub: 1,
-        },
-      });
+        // --- MOBILE ANIMATIONS ---
+        "(max-width: 767px)": () => {
+          // NO PINNING on mobile. The layout will stack naturally.
 
-      // ... animation for .content-card ...
-    }, mainRef);
+          // Simple fade-in animations for each major block
+          const sectionsToAnimate = gsap.utils.toArray([
+            imageColumnRef.current,
+            textColumnRef.current,
+          ]);
+
+          sectionsToAnimate.forEach((section) => {
+            gsap.from(section, {
+              opacity: 0,
+              y: 50,
+              duration: 1,
+              ease: "power3.out",
+              scrollTrigger: {
+                trigger: section,
+                start: "top 85%",
+                toggleActions: "restart none none none",
+              },
+            });
+          });
+        },
+      }); // End of matchMedia
+    }, mainRef); // Main context for cleanup
+
     return () => ctx.revert();
   }, []);
 
@@ -263,21 +288,21 @@ const ToothpasteSection = () => {
             alt="Q10"
             width={190}
             height={190}
-            className="parallax-bubble absolute top-1/4 md:right-20 right-[-60px] z-0"
+            className="parallax-bubble absolute hidden md:block top-1/4 md:right-20 right-[-60px] z-0"
           />
           <Image
             src="/ingredients/Fluoride.png"
             alt="Fluoride"
             width={210}
             height={210}
-            className="parallax-bubble absolute bottom-1/4 mb-20 md:right-10 right-[-120px] z-0"
+            className="parallax-bubble absolute hidden md:block bottom-1/4 mb-20 md:right-10 right-[-120px] z-0"
           />
           <Image
             src="/ingredients/Potassium.png"
             alt="Potassium"
             width={190}
             height={190}
-            className="parallax-bubble absolute top-2/3 md:right-20 right-12 z-0"
+            className="parallax-bubble absolute hidden md:block top-2/3 md:right-20 right-12 z-0"
           />
 
           <Image
@@ -285,14 +310,14 @@ const ToothpasteSection = () => {
             alt="Alcohol Free"
             width={210}
             height={210}
-            className="parallax-bubble absolute top-2/4 left-[-120px] md:left-20  z-0"
+            className="parallax-bubble absolute hidden md:block top-2/4 left-[-120px] md:left-20  z-0"
           />
           <Image
             src="/ingredients/Aloevera.png"
             alt="Alore Vera"
             width={190}
             height={190}
-            className="parallax-bubble absolute  top-2/3 left-12  z-0"
+            className="parallax-bubble absolute hidden md:block  top-2/3 left-12  z-0"
           />
 
           <Image
@@ -300,10 +325,10 @@ const ToothpasteSection = () => {
             alt="Craneberry"
             width={190}
             height={190}
-            className="parallax-bubble absolute mt-20 top-1/4 left-[-30px] md:left-20  z-0"
+            className="parallax-bubble absolute hidden md:block mt-20 top-1/4 left-[-30px] md:left-20  z-0"
           />
 
-          <div className="absolute bottom-40  lg:bottom-10 z-5 flex items-center">
+          <div className="absolute bottom-1 lg:bottom-10 z-5 flex items-center">
             <Image
               src="/slogan/alcohol.png"
               alt="Alcohol Free"

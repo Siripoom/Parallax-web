@@ -336,7 +336,10 @@ const MouthwashSection = () => {
                 <StoreButton key={store.alt} {...store} />
               ))}
             </div>
-            <Link href="#sales-channels" class="flex items-center my-6 w-full">
+            <Link
+              href="#sales-channels"
+              className="flex items-center my-6 w-full"
+            >
               <hr className="flex-grow border-t-2 border-gray-400" />
               <p className="mx-4 text-gray-700 whitespace-nowrap">
                 ช่องทางอื่น ๆ
