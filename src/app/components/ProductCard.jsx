@@ -36,7 +36,9 @@ const ProductCard = ({
         </div>
 
         {/* Text Content */}
-        <h3 className="mb-2 text-lg font-bold text-[#B32B23]">{title}</h3>
+        <h3 className="mb-2 text-lg md:text-2xl font-bold text-[#B32B23]">
+          {title}
+        </h3>
         <p className="mb-6 max-w-xs text-sm  text-[#B32B23]">{description}</p>
       </div>
     </a>

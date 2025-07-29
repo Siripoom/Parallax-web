@@ -89,24 +89,42 @@ const ToothpasteSection = () => {
 
   useLayoutEffect(() => {
     const ctx = gsap.context(() => {
-      // --- THE PINNING & PARALLAX ANIMATION (remains the same) ---
+      const bubbles = gsap.utils.toArray(".parallax-bubble");
+
+      // --- Bubble Entry Animation (Triggers on First Sight) ---
+      gsap.set(bubbles, { opacity: 0, scale: 0.8 });
+
+      // The only change is the ScrollTrigger's `start` property
+      gsap.to(bubbles, {
+        opacity: 1,
+        scale: 1,
+        duration: 1.5,
+        ease: "power3.out",
+        stagger: {
+          each: 0.2,
+          from: "random",
+        },
+        scrollTrigger: {
+          trigger: mainRef.current,
+          // THIS IS THE KEY: "top bottom" means the animation starts
+          // the moment the top of the section hits the bottom of the viewport.
+          start: "top bottom-=100px", // Starts 100px before it's fully in view
+          toggleActions: "play reverse play reverse",
+        },
+      });
+
+      // --- THE PINNING & PARALLAX ANIMATION (Unchanged) ---
       const timeline = gsap.timeline({
         scrollTrigger: {
           trigger: mainRef.current,
           start: "top top",
-          end: `+=${textColumnRef.current.offsetHeight}`, // End after the text column has fully scrolled
+          end: `+=${textColumnRef.current.offsetHeight}`,
           pin: imageColumnRef.current,
           scrub: 1,
         },
       });
 
-      // Animate bubbles based on the main timeline
-      timeline.fromTo(
-        ".parallax-bubble",
-        { yPercent: (i) => 80 + i * 20 },
-        { yPercent: (i) => -40 - i * 10, ease: "none", stagger: 0.1 },
-        0
-      );
+      // ... animation for .content-card ...
     }, mainRef);
     return () => ctx.revert();
   }, []);
@@ -252,7 +270,7 @@ const ToothpasteSection = () => {
             alt="Fluoride"
             width={210}
             height={210}
-            className="parallax-bubble absolute bottom-1/4 md:right-10 right-[-120px] z-0"
+            className="parallax-bubble absolute bottom-1/4 mb-20 md:right-10 right-[-120px] z-0"
           />
           <Image
             src="/ingredients/Potassium.png"
@@ -274,7 +292,7 @@ const ToothpasteSection = () => {
             alt="Alore Vera"
             width={190}
             height={190}
-            className="parallax-bubble absolute mt-10 top-2/3 left-12  z-0"
+            className="parallax-bubble absolute  top-2/3 left-12  z-0"
           />
 
           <Image
@@ -282,7 +300,7 @@ const ToothpasteSection = () => {
             alt="Craneberry"
             width={190}
             height={190}
-            className="parallax-bubble absolute  top-4/4 left-[-30px] md:left-20  z-0"
+            className="parallax-bubble absolute mt-20 top-1/4 left-[-30px] md:left-20  z-0"
           />
 
           <div className="absolute bottom-40  lg:bottom-10 z-5 flex items-center">

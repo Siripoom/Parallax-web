@@ -62,27 +62,78 @@ const MouthwashSection = () => {
   const imageColumnRef = useRef(null);
   const textColumnRef = useRef(null);
 
+  // In src/components/MouthwashSection.jsx
+
+  // In src/components/MouthwashSection.jsx
+
+  // In your component file (e.g., MouthwashSection.jsx)
+
   useLayoutEffect(() => {
     const ctx = gsap.context(() => {
-      // --- THE PINNING & PARALLAX ANIMATION (remains the same) ---
-      const timeline = gsap.timeline({
-        scrollTrigger: {
-          trigger: mainRef.current,
-          start: "top top",
-          end: `+=${textColumnRef.current.offsetHeight}`, // End after the text column has fully scrolled
-          pin: imageColumnRef.current,
-          scrub: 1,
-        },
-      });
+      // Use ScrollTrigger's matchMedia for responsive animations
+      ScrollTrigger.matchMedia({
+        // --- DESKTOP ANIMATIONS ---
+        "(min-width: 768px)": () => {
+          const bubbles = gsap.utils.toArray(".parallax-bubble");
 
-      // Animate bubbles based on the main timeline
-      timeline.fromTo(
-        ".parallax-bubble",
-        { yPercent: (i) => 80 + i * 20 },
-        { yPercent: (i) => -40 - i * 10, ease: "none", stagger: 0.1 },
-        0
-      );
-    }, mainRef);
+          // 1. Bubble Entry/Exit Animation for Desktop
+          const bubbleEntryTl = gsap.timeline({ paused: true });
+          bubbleEntryTl.from(bubbles, {
+            opacity: 0,
+            scale: 0.8,
+            y: 50,
+            duration: 1.2,
+            ease: "power3.out",
+            stagger: { each: 0.1, from: "random" },
+          });
+
+          ScrollTrigger.create({
+            trigger: mainRef.current,
+            start: "top 80%",
+            end: "bottom 20%",
+            animation: bubbleEntryTl,
+            toggleActions: "play reverse play reverse",
+          });
+
+          // 2. The Pinning & Parallax Timeline for Desktop
+          const pinningTl = gsap.timeline({
+            scrollTrigger: {
+              trigger: mainRef.current,
+              start: "top top",
+              end: `+=${textColumnRef.current.offsetHeight}`,
+              pin: imageColumnRef.current,
+              scrub: 1.5, // A slightly slower scrub can feel more premium
+            },
+          });
+        },
+
+        // --- MOBILE ANIMATIONS ---
+        "(max-width: 767px)": () => {
+          // NO PINNING on mobile. The layout will stack naturally.
+
+          // Simple fade-in animations for each major block
+          const sectionsToAnimate = gsap.utils.toArray([
+            imageColumnRef.current,
+            textColumnRef.current,
+          ]);
+
+          sectionsToAnimate.forEach((section) => {
+            gsap.from(section, {
+              opacity: 0,
+              y: 50,
+              duration: 1,
+              ease: "power3.out",
+              scrollTrigger: {
+                trigger: section,
+                start: "top 85%",
+                toggleActions: "restart none none none",
+              },
+            });
+          });
+        },
+      }); // End of matchMedia
+    }, mainRef); // Main context for cleanup
+
     return () => ctx.revert();
   }, []);
 
@@ -104,54 +155,67 @@ const MouthwashSection = () => {
             alt="Hydroxyapatite Collagen"
             width={190}
             height={190}
-            className="parallax-bubble absolute   top-1/4 left-[-30px] md:left-20  z-0"
+            // Mobile: Closer to the edge. Desktop: Further out.
+            className="parallax-bubble hidden lg:block absolute w-30 md:w-40 lg:w-50 top-1/4 left-[-10px] z-0 md:left-20"
           />
+
+          {/* Cranberry - Top Right */}
           <Image
             src="/ingredients/Craneberry.png"
             alt="Craneberry"
             width={190}
             height={190}
-            className="parallax-bubble absolute  top-1/4 right-[-30px] md:right-20  z-0"
+            // Mobile: Closer. Desktop: Further.
+            className="parallax-bubble hidden lg:block absolute w-30 md:w-40 lg:w-50 top-1/4 right-[-10px] z-0 md:right-20"
           />
+
+          {/* Q10 - Mid Left */}
           <Image
             src="/ingredients/Q10.png"
             alt="Q10"
             width={195}
             height={195}
-            className="parallax-bubble absolute mt-10 bottom-1/4 left-[-120px] md:left-20  z-0"
+            // Mobile: Hidden entirely to reduce clutter. Desktop: Visible.
+            className="parallax-bubble hidden lg:block absolute w-30 md:w-40 lg:w-50 bottom-1/4 left-[-120px] z-0 hidden md:block md:left-20"
           />
 
+          {/* Alcohol Free - Mid Right */}
           <Image
             src="/ingredients/Alchoholfree.png"
             alt="Alcohol Free"
             width={210}
             height={210}
-            className="parallax-bubble absolute  bottom-1/4 right-[-120px] md:right-20  z-0"
+            className="parallax-bubble hidden lg:block absolute w-30 md:w-40 lg:w-50 bottom-1/4 right-[-120px] z-0 hidden md:block md:right-20"
           />
 
+          {/* Collagen - Bottom Left */}
           <Image
             src="/ingredients/Collagen.png"
             alt="Collagen"
             width={190}
             height={190}
-            className="parallax-bubble absolute mt-10 top-2/3 left-12  z-0"
-          />
-          <Image
-            src="/ingredients/Aloevera.png"
-            alt="Alore Vera"
-            width={190}
-            height={190}
-            className="parallax-bubble absolute mt-10 top-2/3 right-12  z-0"
+            // Mobile: Tucked in. Desktop: Spread out.
+            className="parallax-bubble hidden lg:block absolute w-30 md:w-40 lg:w-50 top-2/3 left-[-40px] z-0 mt-10 md:left-12"
           />
 
-          <div className="absolute bottom-12 z-5 flex items-center justify-between">
+          {/* Aloe Vera - Bottom Right */}
+          <Image
+            src="/ingredients/Aloevera.png"
+            alt="Aloe Vera"
+            width={190}
+            height={190}
+            // Mobile: Tucked in. Desktop: Spread out.
+            className="parallax-bubble hidden lg:block absolute w-30 md:w-40 lg:w-50 top-2/3 right-[-40px] z-0 mt-10 md:right-12"
+          />
+
+          <div className="absolute bottom-[-40px] md:bottom-[-20px] lg:bottom-1 z-5 flex items-center justify-between">
             {/* Static Slogans */}
             <Image
               src="/slogan/slogan.png"
               alt="Slogan"
               width={130}
               height={130}
-              className=" right-10 hidden md:block md:right-12 z-0"
+              className=" right-10  md:right-12 z-0"
             />
             <Image
               src="/slogan/alcohol.png"
@@ -273,9 +337,11 @@ const MouthwashSection = () => {
               ))}
             </div>
             <Link href="#sales-channels" class="flex items-center my-6 w-full">
-              <hr class="flex-grow border-t-2 border-gray-400" />
-              <p class="mx-4 text-gray-700 whitespace-nowrap">ช่องทางอื่น ๆ</p>
-              <hr class="flex-grow border-t-2 border-gray-400" />
+              <hr className="flex-grow border-t-2 border-gray-400" />
+              <p className="mx-4 text-gray-700 whitespace-nowrap">
+                ช่องทางอื่น ๆ
+              </p>
+              <hr className="flex-grow border-t-2 border-gray-400" />
             </Link>
           </div>
         </div>
