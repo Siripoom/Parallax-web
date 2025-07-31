@@ -82,7 +82,7 @@ const AboutUsSection = () => {
 
         <div className="about-us-image flex items-center justify-center">
           <Image
-            src="/about/brand.png"
+            src="/about/Dentist.jpg"
             alt="Dentist with patient"
             width={400}
             height={400}

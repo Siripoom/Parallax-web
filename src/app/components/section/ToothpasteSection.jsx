@@ -26,47 +26,6 @@ const propertiesData = [
   },
 ];
 
-const manualTip = [
-  {
-    name: "1.บีบน้ำยาขึ้นมาอยู่ที่คอขวดแล้วปล่อยมือ น้ำยาบ้วนปากจะขึ้นมาประมาณ 10-15 มล. ซึ่งทำให้ประหยัดและเพียงพอต่อการบ้วนปากหนึ่งครั้ง",
-    src: "/products/mouthwash.png",
-  },
-  {
-    name: "2.กลั้วปากให้ทั่วประมาณ 30 วินาที แล้วบ้วนทิ้ง",
-    src: "/products/mouthwash.png",
-  },
-  {
-    name: "3.ปิดฝาให้สนิทลังใช้งานโดยใช้ วันละ 2 ครั้ง หลังการแปรงฟันหรือมื้ออาหาร",
-    src: "/products/mouthwash.png",
-  },
-];
-
-// --- Data for this specific component ---
-const ingredients = [
-  {
-    name: "COENZYME Q10",
-    description: "กระตุ้นการสร้างคอลลาเจน และบํารุงเหงือก ให้แข็งแรง",
-  },
-  {
-    name: "ALOE VERA EXTRACT",
-    description: "เพิ่มความชุ่มชื้นในช่องปาก ลด อาการปากแห้งและลดการอักเสบ",
-  },
-  {
-    name: "POTASSIUM NITRATE",
-    description: "สารสําคัญที่ช่วยลดอาการ เสียวฟัน ได้อย่างมีประสิทธิภาพ",
-  }, // Example new ingredient
-  {
-    name: "SODIUM CHLORIDE",
-    description: "ลดการอักเสบและช่วยกระชับเหงือก ",
-  },
-  { name: "VITAMIN C", description: "ลดการอักเสบ ป้องกันเลือดออกตามไรฟัน" },
-  {
-    name: "CRANBERRY EXTRACT",
-    description:
-      "มีสาร PROANTHOCYANIDINS (PACS) ที่ช่วยยับยั้งการเกาะของแบคทีเรียบนผิวฟัน",
-  },
-];
-
 const onlineStores = [
   {
     href: "https://shopee.co.th/%E0%B8%A2%E0%B8%B2%E0%B8%AA%E0%B8%B5%E0%B8%9F%E0%B8%B1%E0%B8%99-AFTERDENT-Cranberry-Delight-%E0%B8%8A%E0%B8%B8%E0%B9%88%E0%B8%A1%E0%B8%8A%E0%B8%B7%E0%B9%89%E0%B8%99-%E0%B8%8A%E0%B9%88%E0%B8%A7%E0%B8%A2%E0%B8%AA%E0%B8%A1%E0%B8%B2%E0%B8%99%E0%B9%81%E0%B8%9C%E0%B8%A5%E0%B9%83%E0%B8%99%E0%B8%8A%E0%B9%88%E0%B8%AD%E0%B8%87%E0%B8%9B%E0%B8%B2%E0%B8%81-i.135011894.12024470629",
@@ -228,9 +187,9 @@ const ToothpasteSection = () => {
                 <div className="flex justify-center gap-4">
                   <div className="flex flex-col items-center text-center">
                     <Image
-                      src="/icon/mouthwash/extract/Hydro.png"
+                      src="/icon/toothPaste/extract/KNO.png"
                       alt="Q10"
-                      className="rounded-full opacity-75 my-3"
+                      className="rounded-full opacity-100  contrast-125 my-3"
                       width={90}
                       height={90}
                     />
@@ -243,9 +202,9 @@ const ToothpasteSection = () => {
                   </div>
                   <div className="flex flex-col items-center text-center">
                     <Image
-                      src="/icon/mouthwash/extract/Hydro.png"
+                      src="/icon/toothPaste/extract/NacI.png"
                       alt="Q10"
-                      className="rounded-full opacity-75 my-3"
+                      className="rounded-full opacity-100  contrast-125 my-3"
                       width={90}
                       height={90}
                     />
@@ -268,10 +227,15 @@ const ToothpasteSection = () => {
                 <StoreButton key={store.alt} {...store} />
               ))}
             </div>
-            <Link href="#sales-channels" class="flex items-center my-6 w-full">
-              <hr class="flex-grow border-t-2 border-gray-400" />
-              <p class="mx-4 text-gray-700 whitespace-nowrap">ช่องทางอื่น ๆ</p>
-              <hr class="flex-grow border-t-2 border-gray-400" />
+            <Link
+              href="#sales-channels"
+              className="flex items-center my-6 w-full"
+            >
+              <hr className="flex-grow border-t-2 border-gray-400" />
+              <p className="mx-4 text-gray-700 whitespace-nowrap">
+                ช่องทางอื่น ๆ
+              </p>
+              <hr className="flex-grow border-t-2 border-gray-400" />
             </Link>
           </div>
         </div>
