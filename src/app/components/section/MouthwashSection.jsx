@@ -15,15 +15,19 @@ gsap.registerPlugin(ScrollTrigger);
 const propertiesData = [
   {
     bgSrc: "/property/fresh.png", // Path to image in /public folder
-    points: ["ลดกลิ่นปาก", "ลมหายใจสดชื่น"],
+    points: [
+      "ลดเสียวฟันทันทีและแก้ให้หายขาด",
+      "ซ่อมแซมและเคลือบผิวฟันให้แข็งแรงป้องกันฟันผุ",
+      "ขจัดคราบพลัค และช่วยให้ฟันขาวขึ้น",
+    ],
   },
   {
     bgSrc: "/property/protect.png", // Path to image in /public folder
-    points: ["เสริมความแข็งแรงให้ผิวเคลือบฟัน", "ป้องกันฟันผุ"],
+    points: ["ลดอักเสบ เร่งสมานแผล", "กระตุ้นคอลลาเจน"],
   },
   {
     bgSrc: "/property/bacteria.png", // Path to image in /public folder
-    points: ["ปลอบประโลมเหงือก", "ลดการอักเสบ"],
+    points: ["ดับกลิ่นปากได้ยาวนาน", "ยับยั้ง Bacteria"],
   },
 ];
 
@@ -159,7 +163,7 @@ const MouthwashSection = () => {
             width={190}
             height={190}
             // Mobile: Closer to the edge. Desktop: Further out.
-            className="parallax-bubble hidden lg:block absolute w-30 md:w-40 lg:w-50 top-1/4 left-[-10px] z-0 md:left-20"
+            className="parallax-bubble hidden md:hidden lg:block absolute w-[25%] h-[25%]  md:w-[20%] md:h-[20%] lg:w-[25%] lg:h-[25%]  lg:w-50 top-1/4  z-0 left-20"
           />
 
           {/* Cranberry - Top Right */}
@@ -169,7 +173,7 @@ const MouthwashSection = () => {
             width={190}
             height={190}
             // Mobile: Closer. Desktop: Further.
-            className="parallax-bubble hidden lg:block absolute w-30 md:w-40 lg:w-50 top-1/4 right-[-10px] z-0 md:right-20"
+            className="parallax-bubble hidden  md:hidden lg:block absolute w-[25%] h-[25%]  md:w-[20%] md:h-[20%] lg:w-[25%] lg:h-[25%]   top-1/4  z-0 right-20"
           />
 
           {/* Q10 - Mid Left */}
@@ -179,7 +183,7 @@ const MouthwashSection = () => {
             width={195}
             height={195}
             // Mobile: Hidden entirely to reduce clutter. Desktop: Visible.
-            className="parallax-bubble hidden lg:block absolute w-30 md:w-40 lg:w-50 bottom-1/4 left-[-120px] z-0 hidden md:block md:left-20"
+            className="parallax-bubble hidden  md:hidden lg:block absolute w-[25%] h-[25%]  md:w-[20%] md:h-[20%] lg:w-[25%] lg:h-[25%]   bottom-1/4 z-0 hidden md:block left-20"
           />
 
           {/* Alcohol Free - Mid Right */}
@@ -188,7 +192,7 @@ const MouthwashSection = () => {
             alt="Alcohol Free"
             width={210}
             height={210}
-            className="parallax-bubble hidden lg:block absolute w-30 md:w-40 lg:w-50 bottom-1/4 right-[-120px] z-0 hidden md:block md:right-20"
+            className="parallax-bubble hidden  md:hidden lg:block absolute w-[25%] h-[25%]  md:w-[20%] md:h-[20%] lg:w-[25%] lg:h-[25%]   bottom-1/4  z-0 hidden md:block right-20"
           />
 
           {/* Collagen - Bottom Left */}
@@ -198,7 +202,7 @@ const MouthwashSection = () => {
             width={190}
             height={190}
             // Mobile: Tucked in. Desktop: Spread out.
-            className="parallax-bubble hidden lg:block absolute w-30 md:w-40 lg:w-50 top-2/3 left-[-40px] z-0 mt-10 md:left-12"
+            className="parallax-bubble hidden  md:hidden lg:block absolute w-[25%] h-[25%]  md:w-[20%] md:h-[20%] lg:w-[25%] lg:h-[25%]   top-2/3 z-0 mt-10 left-12"
           />
 
           {/* Aloe Vera - Bottom Right */}
@@ -208,7 +212,7 @@ const MouthwashSection = () => {
             width={190}
             height={190}
             // Mobile: Tucked in. Desktop: Spread out.
-            className="parallax-bubble hidden lg:block absolute w-30 md:w-40 lg:w-50 top-2/3 right-[-40px] z-0 mt-10 md:right-12"
+            className="parallax-bubble hidden lg:block absolute w-[25%] h-[25%]  md:w-[20%] md:h-[20%] lg:w-[25%] lg:h-[25%]   top-2/3 z-0 mt-10 right-12"
           />
 
           <div className="absolute bottom-[-40px] md:bottom-[-20px] lg:bottom-1 z-5 flex items-center justify-between">
@@ -235,8 +239,11 @@ const MouthwashSection = () => {
           </div>
 
           {/* Main Product Image */}
-          <div className="relative flex h-[300px] w-[300px] items-center justify-center">
+          <div className="relative flex flex-col md:flex-row h-[300px] w-[300px] items-center justify-center">
             <div className="absolute inset-0 z-0 w-[300px] h-[300px]   rounded-full bg-red-300/20"></div>
+            <h1 className="text-xl block md:hidden text-center  md:text-3xl font-bold">
+              AFTERDENT Cranberry Mouthwash Flavour 500 ml.
+            </h1>
             <Image
               src="/products/mouthwash.png"
               alt="Mouthwash Bottle"
@@ -254,7 +261,7 @@ const MouthwashSection = () => {
           className="flex flex-col items-center justify-center gap-8 py-24 px-4 text-center"
         >
           <div className="content-card">
-            <h1 className="text-3xl font-bold">
+            <h1 className="text-2xl sm:text-3xl md:text-3xl font-bold hidden md:block md:text-3xl font-bold">
               AFTERDENT Cranberry Mouthwash Flavour 500 ml.
             </h1>
           </div>
@@ -266,10 +273,9 @@ const MouthwashSection = () => {
           <div className="infographic-section">
             <div>
               <h3 className="mb-8 text-2xl font-bold text-red-700">ส่วนผสม</h3>
-              <div className="flex flex-col items-center gap-4">
-                {/* Top Row */}
-                <div className="flex justify-center gap-4">
-                  <div className="flex flex-col items-center  text-center">
+              <div className="items-center gap-4">
+                <div className="grid md:grid-cols-2 justify-center gap-4">
+                  <div className="flex flex-col items-center text-center">
                     <Image
                       src="/icon/mouthwash/extract/Q10.png"
                       alt="Q10"
@@ -277,10 +283,12 @@ const MouthwashSection = () => {
                       width={90}
                       height={90}
                     />
-                    <p className="text-sm text-red-700 font-bold">
-                      Coenzyme Q10
-                    </p>
-                    <p>เพิ่มความชุ่มชื้น เร่งสมานแผลและสร้างคอลลาเจน</p>
+                    <div className="group-card bg-white rounded-2xl p-3 shadow-md ">
+                      <p className="text-sm text-red-700 font-bold">
+                        Coenzyme Q10
+                      </p>
+                      <p>เพิ่มความชุ่มชื้น เร่งสมานแผลและสร้างคอลลาเจน</p>
+                    </div>
                   </div>
                   <div className="flex flex-col items-center text-center">
                     <Image
@@ -290,10 +298,12 @@ const MouthwashSection = () => {
                       width={90}
                       height={90}
                     />
-                    <p className="text-sm text-red-700 font-bold">
-                      ALOE VERA EXTRACT
-                    </p>
-                    <p>ลดการอักเสบ ปลอบประโลมเนื้อเยื่อ ในช่องปาก</p>
+                    <div className="group-card bg-white rounded-2xl p-3 shadow-md ">
+                      <p className="text-sm text-red-700 font-bold">
+                        ALOE VERA EXTRACT
+                      </p>
+                      <p>ลดการอักเสบ ปลอบประโลมเนื้อเยื่อ ในช่องปาก</p>
+                    </div>
                   </div>
                   <div className="flex flex-col items-center text-center">
                     <Image
@@ -303,12 +313,14 @@ const MouthwashSection = () => {
                       width={90}
                       height={90}
                     />
-                    <p className="text-sm text-red-700 font-bold">
-                      CRANBERRY EXTRACT
-                    </p>
-                    <p>ช่วยยับยั้งการเกาะของแบคทีเรียบนผิวฟัน</p>
+                    <div className="group-card bg-white rounded-2xl p-3 shadow-md ">
+                      <p className="text-sm text-red-700 font-bold">
+                        CRANBERRY EXTRACT
+                      </p>
+                      <p>ช่วยยับยั้งการเกาะของแบคทีเรียบนผิวฟัน</p>
+                    </div>
                   </div>
-                  <div className="flex flex-col items-center text-center">
+                  <div className="flex flex-col items-center text-center ">
                     <Image
                       src="/icon/mouthwash/extract/Hydro.png"
                       alt="Q10"
@@ -316,10 +328,12 @@ const MouthwashSection = () => {
                       width={90}
                       height={90}
                     />
-                    <p className="text-sm text-red-700 font-bold">
-                      HYDROXYAPATITE
-                    </p>
-                    <p>ลดเสียวฟัน และเสริมความแข็งแรงให้ ผิวเคลือบฟัน</p>
+                    <div className="group-card bg-white rounded-2xl p-3 shadow-md ">
+                      <p className="text-sm text-red-700 font-bold">
+                        HYDROXYAPATITE
+                      </p>
+                      <p>ลดเสียวฟัน และเสริมความแข็งแรงให้ ผิวเคลือบฟัน</p>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -334,7 +348,7 @@ const MouthwashSection = () => {
             <h2 className="text-2xl font-bold rounded-full p-3 bg-red-700  text-white">
               ช่องทางการสั่งซื้อ
             </h2>
-            <div className="grid grid-cols-2 gap-4">
+            <div className="grid lg:grid-cols-2 gap-4">
               {onlineStores.map((store) => (
                 <StoreButton key={store.alt} {...store} />
               ))}

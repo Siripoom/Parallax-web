@@ -88,7 +88,7 @@ const SalesChannelsSection = () => {
           <h3 className="mb-8 text-2xl font-bold text-brand-dark">
             หน้าร้าน (On-site)
           </h3>
-          <div className="grid grid-cols-2 gap-4 md:grid-cols-4 lg:max-w-4xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-4 md:grid-cols-4 lg:max-w-4xl mx-auto">
             {onsiteChannels.map((channel) => (
               <ChannelCard key={channel.name} {...channel} />
             ))}
@@ -100,7 +100,7 @@ const SalesChannelsSection = () => {
           <h3 className="mb-8 text-2xl font-bold text-brand-dark">
             ออนไลน์ (Online)
           </h3>
-          <div className="grid grid-cols-2 gap-1 md:grid-cols-3 lg:max-w-3xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-4 md:grid-cols-3 lg:max-w-3xl mx-auto">
             {onlineChannels.map((channel) => (
               <ChannelCard key={channel.name} {...channel} />
             ))}

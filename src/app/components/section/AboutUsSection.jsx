@@ -56,7 +56,7 @@ const AboutUsSection = () => {
       <div className="mx-auto w-full max-w-6xl mx-auto text-center">
         {/* --- Title --- */}
         <div className="about-us-anim">
-          <h2 className="text-4xl font-extrabold uppercase text-brand-orange">
+          <h2 className="text-5xl font-extrabold uppercase text-brand-orange">
             Get To Know Us
           </h2>
         </div>
@@ -80,14 +80,32 @@ const AboutUsSection = () => {
           imageSrc="/about/aboutText.JPG" // The image you want inside the text
         />
 
-        <div className="about-us-image flex items-center justify-center">
-          <Image
-            src="/about/Dentist.jpg"
-            alt="Dentist with patient"
-            width={400}
-            height={400}
-            className="rounded-lg w-full  shadow-lg ml-auto"
-          />
+        <div className="about-us-image grid gap-4 md:grid-cols-2 items-center justify-center">
+          <div>
+            <Image
+              src="/about/presenter.jpg"
+              alt="Dentist with patient"
+              width={400}
+              height={0}
+              className="rounded-lg w-full h-full  shadow-lg ml-auto"
+            />
+          </div>
+          <div className="flex flex-col gap-3">
+            <Image
+              src="/about/Dentist.jpg"
+              alt="Dentist with patient"
+              width={400}
+              height={400}
+              className="rounded-lg w-full  shadow-lg ml-auto"
+            />
+            <Image
+              src="/about/smile.jpg"
+              alt="Dentist with patient"
+              width={400}
+              height={400}
+              className="rounded-lg w-full  shadow-lg ml-auto"
+            />
+          </div>
         </div>
 
         {/* --- Value Proposition Text --- */}

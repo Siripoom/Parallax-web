@@ -127,10 +127,9 @@ const ToothpasteSection = () => {
           className="flex flex-col order-2 md:order-1 items-center justify-center gap-8 py-24 px-4 text-center"
         >
           <div className="content-card-tp">
-            <h1 className="text-3xl font-bold">Cranberry Delight Toothpaste</h1>
-            <h2 className="mt-2 text-2xl font-bold">
-              ยาสีฟัน สูตรแครนเบอร์รี่ ดีไลท์
-            </h2>
+            <h1 className="text-3xl hidden md:block font-bold">
+              Afterdent Cranberry Delight Toothpaste
+            </h1>
           </div>
 
           <div className="infographic-section">
@@ -142,7 +141,7 @@ const ToothpasteSection = () => {
               <h3 className="mb-8 text-2xl font-bold text-red-700">ส่วนผสม</h3>
               <div className="flex flex-col items-center gap-4">
                 {/* Top Row */}
-                <div className="flex justify-center gap-4">
+                <div className="grid md:grid-cols-2 gap-4">
                   <div className="flex flex-col items-center  text-center">
                     <Image
                       src="/icon/mouthwash/extract/Q10.png"
@@ -184,7 +183,7 @@ const ToothpasteSection = () => {
                   </div>
                 </div>
                 {/* Bottom Row */}
-                <div className="flex justify-center gap-4">
+                <div className="grid md:grid-cols-2 justify-center gap-4">
                   <div className="flex flex-col items-center text-center">
                     <Image
                       src="/icon/toothPaste/extract/KNO.png"
@@ -222,7 +221,7 @@ const ToothpasteSection = () => {
             <h2 className="text-2xl font-bold rounded-full p-3 bg-red-700  text-white">
               ช่องทางการสั่งซื้อ
             </h2>
-            <div className="grid grid-cols-2 gap-4">
+            <div className="grid md:grid-cols-2 gap-4">
               {onlineStores.map((store) => (
                 <StoreButton key={store.alt} {...store} />
               ))}
@@ -252,21 +251,21 @@ const ToothpasteSection = () => {
             alt="Q10"
             width={190}
             height={190}
-            className="parallax-bubble absolute hidden md:block top-1/4 md:right-20 right-[-60px] z-0"
+            className="parallax-bubble absolute hidden lg:block top-1/4 right-20  z-0"
           />
           <Image
             src="/ingredients/Fluoride.png"
             alt="Fluoride"
             width={210}
             height={210}
-            className="parallax-bubble absolute hidden md:block bottom-1/4 mb-20 md:right-10 right-[-120px] z-0"
+            className="parallax-bubble absolute hidden lg:block bottom-1/4 mb-20 right-10  z-0"
           />
           <Image
             src="/ingredients/Potassium.png"
             alt="Potassium"
             width={190}
             height={190}
-            className="parallax-bubble absolute hidden md:block top-2/3 md:right-20 right-12 z-0"
+            className="parallax-bubble absolute hidden lg:block top-2/3 right-5 z-0"
           />
 
           <Image
@@ -274,14 +273,14 @@ const ToothpasteSection = () => {
             alt="Alcohol Free"
             width={210}
             height={210}
-            className="parallax-bubble absolute hidden md:block top-2/4 left-[-120px] md:left-20  z-0"
+            className="parallax-bubble absolute hidden lg:block mt-20  left-1  z-0"
           />
           <Image
             src="/ingredients/Aloevera.png"
             alt="Alore Vera"
             width={190}
             height={190}
-            className="parallax-bubble absolute hidden md:block  top-2/3 left-12  z-0"
+            className="parallax-bubble absolute hidden lg:block  top-2/3 left-5  z-0"
           />
 
           <Image
@@ -289,10 +288,10 @@ const ToothpasteSection = () => {
             alt="Craneberry"
             width={190}
             height={190}
-            className="parallax-bubble absolute hidden md:block mt-20 top-1/4 left-[-30px] md:left-20  z-0"
+            className="parallax-bubble absolute hidden lg:block  top-1/4   left-5  z-0"
           />
 
-          <div className="absolute bottom-1 lg:bottom-10 z-5 flex items-center">
+          <div className="absolute bottom-0 z-5 flex items-center">
             <Image
               src="/slogan/alcohol.png"
               alt="Alcohol Free"
@@ -308,8 +307,11 @@ const ToothpasteSection = () => {
           </div>
 
           {/* Main Product Image */}
-          <div className="relative flex h-[300px] w-[300px] items-center justify-center">
+          <div className="relative h-[300px] w-[300px] items-center justify-center">
             <div className="absolute inset-0 z-0 h-[300px] w-[300px] rounded-full bg-red-300/20"></div>
+            <h1 className="text-xl text-center md:hidden font-bold">
+              Afterdent Cranberry Delight Toothpaste
+            </h1>
             <Image
               src="/products/toothpaste.png"
               alt="Toothpaste and box"

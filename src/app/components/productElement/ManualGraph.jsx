@@ -73,7 +73,7 @@ const ManualGraph = ({ data }) => {
   return (
     <div ref={sectionRef}>
       <InfoGraphicSection title="วิธีใช้งาน">
-        <div className="grid grid-cols-1 gap-6 sm:grid-cols-3">
+        <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
           {data.map((item, index) => (
             <div key={index} className="flex flex-col items-center text-center">
               {/* Video Container */}
@@ -84,7 +84,7 @@ const ManualGraph = ({ data }) => {
                   src={item.videoSrc}
                   muted
                   playsInline
-                  className={`h-full w-full object-cover transition-all duration-500 ${
+                  className={`h-full  w-full object-cover transition-all duration-500 ${
                     activeVideoIndex === index
                       ? "opacity-100 scale-105"
                       : "opacity-75 scale-100"

@@ -8,7 +8,7 @@ const ChannelCard = ({ name, logoSrc, link, logoClassName }) => {
 
   const CardContent = (
     <>
-      <div className="flex flex-col items-center justify-between rounded-2xl bg-white p-6 shadow-lg transition-transform duration-300 ">
+      <div className="flex flex-col items-center justify-between rounded-2xl bg-white md:w-full w-80  p-6 shadow-lg transition-transform duration-300 ">
         {/* Link Button */}
         <div className="flex w-full items-center justify-center">
           <Image
