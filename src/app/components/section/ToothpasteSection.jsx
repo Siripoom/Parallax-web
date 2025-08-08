@@ -170,7 +170,7 @@ const ToothpasteSection = () => {
                   </div>
                   <div className="flex flex-col items-center text-center">
                     <Image
-                      src="/icon/mouthwash/extract/cranBerry.png"
+                      src="/icon/toothPaste/extract/KNO.png"
                       alt="CRANBERRY EXTRACT"
                       className="rounded-full opacity-75 my-3"
                       width={90}
@@ -183,7 +183,7 @@ const ToothpasteSection = () => {
                   </div>
                   <div className="flex flex-col items-center text-center">
                     <Image
-                      src="/icon/mouthwash/extract/cranBerry.png"
+                      src="/icon/toothPaste/extract/Nacl.png"
                       alt="CRANBERRY EXTRACT"
                       className="rounded-full opacity-75 my-3"
                       width={90}
@@ -196,8 +196,8 @@ const ToothpasteSection = () => {
                   </div>
                   <div className="flex flex-col items-center text-center">
                     <Image
-                      src="/icon/mouthwash/extract/cranBerry.png"
-                      alt="CRANBERRY EXTRACT"
+                      src="/icon/mouthwash/extract/Fluorite.png"
+                      alt="Fluorite"
                       className="rounded-full opacity-75 my-3"
                       width={90}
                       height={90}
@@ -209,37 +209,6 @@ const ToothpasteSection = () => {
                       ฟลูออไรด์สูงสุด ที่ช่วยซ่อมแซมผิวฟัน เสริมความ แข็งแรง
                       และป้องกันฟันผุ ปราศจากสารเคมีที่เป็นอันตรายต่อ ช่องปาก
                     </p>
-                  </div>
-                </div>
-                {/* Bottom Row */}
-                <div className="grid md:grid-cols-2 justify-center gap-4">
-                  <div className="flex flex-col items-center text-center">
-                    <Image
-                      src="/icon/toothPaste/extract/KNO.png"
-                      alt="Q10"
-                      className="rounded-full opacity-100  contrast-125 my-3"
-                      width={90}
-                      height={90}
-                    />
-                    <p className="text-sm text-red-700 font-bold">
-                      POTASSIUM NITRATE
-                    </p>
-                    <p>
-                      สารสําคัญที่ช่วยลดอาการ เสียวฟัน ได้อย่างมีประสิทธิภาพ
-                    </p>
-                  </div>
-                  <div className="flex flex-col items-center text-center">
-                    <Image
-                      src="/icon/toothPaste/extract/NacI.png"
-                      alt="Q10"
-                      className="rounded-full opacity-100  contrast-125 my-3"
-                      width={90}
-                      height={90}
-                    />
-                    <p className="text-sm text-red-700 font-bold">
-                      SODIUM CHLORIDE
-                    </p>
-                    <p>ลดการอักเสบและช่วยกระชับเหงือก</p>
                   </div>
                 </div>
               </div>

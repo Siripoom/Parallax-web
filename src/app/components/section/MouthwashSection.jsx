@@ -281,7 +281,7 @@ const MouthwashSection = () => {
                 <div className="grid md:grid-cols-2 justify-center gap-4">
                   <div className="flex flex-col items-center text-center">
                     <Image
-                      src="/icon/mouthwash/extract/Q10.png"
+                      src="/icon/mouthwash/extract/cranBerry.png"
                       alt="Q10"
                       className="rounded-full opacity-75 my-3"
                       width={90}
@@ -317,7 +317,7 @@ const MouthwashSection = () => {
                   </div>
                   <div className="flex flex-col items-center text-center">
                     <Image
-                      src="/icon/mouthwash/extract/cranBerry.png"
+                      src="/icon/mouthwash/extract/Hydro.png"
                       alt="CRANBERRY EXTRACT"
                       className="rounded-full opacity-75 my-3"
                       width={90}
