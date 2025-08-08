@@ -30,7 +30,7 @@ const propertiesData = [
     points: ["ดับกลิ่นปากได้ยาวนาน", "ยับยั้ง Bacteria"],
   },
   {
-    bgSrc: "/property/bacteria.png", // Path to image in /public folder
+    bgSrc: "/property/save.png", // Path to image in /public folder
     points: ["ใช้ง่าย ประหยัด #บีบแล้วบ้วน", "สูตรเจลอ่อนโยน"],
   },
 ];
@@ -167,7 +167,7 @@ const MouthwashSection = () => {
             width={190}
             height={190}
             // Mobile: Closer to the edge. Desktop: Further out.
-            className="parallax-bubble hidden md:hidden lg:block absolute w-[25%] h-[25%]  md:w-[20%] md:h-[20%] lg:w-[25%] lg:h-[25%]  lg:w-50 top-1/4  z-0 left-20"
+            className="parallax-bubble absolute hidden lg:block top-1/4 left-20  z-0 "
           />
 
           {/* Cranberry - Top Right */}
@@ -177,7 +177,7 @@ const MouthwashSection = () => {
             width={190}
             height={190}
             // Mobile: Closer. Desktop: Further.
-            className="parallax-bubble hidden  md:hidden lg:block absolute w-[25%] h-[25%]  md:w-[20%] md:h-[20%] lg:w-[25%] lg:h-[25%]   top-1/4  z-0 right-20"
+            className="parallax-bubble absolute hidden lg:block top-1/4 mb-20 right-20 "
           />
 
           {/* Q10 - Mid Left */}
@@ -187,7 +187,7 @@ const MouthwashSection = () => {
             width={195}
             height={195}
             // Mobile: Hidden entirely to reduce clutter. Desktop: Visible.
-            className="parallax-bubble hidden  md:hidden lg:block absolute w-[25%] h-[25%]  md:w-[20%] md:h-[20%] lg:w-[25%] lg:h-[25%]   bottom-1/4 z-0 hidden md:block left-20"
+            className=" parallax-bubble absolute hidden lg:block bottom-1/3 left-20 z-0"
           />
 
           {/* Alcohol Free - Mid Right */}
@@ -196,7 +196,7 @@ const MouthwashSection = () => {
             alt="Alcohol Free"
             width={210}
             height={210}
-            className="parallax-bubble hidden  md:hidden lg:block absolute w-[25%] h-[25%]  md:w-[20%] md:h-[20%] lg:w-[25%] lg:h-[25%]   bottom-1/4  z-0 hidden md:block right-20"
+            className=" parallax-bubble absolute hidden lg:block bottom-1/3 right-20 z-0"
           />
 
           {/* Collagen - Bottom Left */}
@@ -206,7 +206,7 @@ const MouthwashSection = () => {
             width={190}
             height={190}
             // Mobile: Tucked in. Desktop: Spread out.
-            className="parallax-bubble hidden  md:hidden lg:block absolute w-[25%] h-[25%]  md:w-[20%] md:h-[20%] lg:w-[25%] lg:h-[25%]   top-2/3 z-0 mt-10 left-12"
+            className=" parallax-bubble absolute hidden lg:block top-2/3 left-20  z-0"
           />
 
           {/* Aloe Vera - Bottom Right */}
@@ -216,7 +216,7 @@ const MouthwashSection = () => {
             width={190}
             height={190}
             // Mobile: Tucked in. Desktop: Spread out.
-            className="parallax-bubble hidden lg:block absolute w-[25%] h-[25%]  md:w-[20%] md:h-[20%] lg:w-[25%] lg:h-[25%]   top-2/3 z-0 mt-10 right-12"
+            className=" parallax-bubble absolute hidden lg:block top-2/3 z-0 right-20"
           />
 
           <div className="absolute bottom-[-40px] md:bottom-[-20px] lg:bottom-1 z-5 flex items-center justify-between">
@@ -276,7 +276,7 @@ const MouthwashSection = () => {
 
           <div className="infographic-section">
             <div>
-              <h3 className="mb-8 text-2xl font-bold text-red-700">ส่วนผสม</h3>
+              <h3 className="mb-8 text-3xl font-bold text-red-700">ส่วนผสม</h3>
               <div className="items-center gap-4">
                 <div className="grid md:grid-cols-2 justify-center gap-4">
                   <div className="flex flex-col items-center text-center">
@@ -335,9 +335,9 @@ const MouthwashSection = () => {
                   </div>
                   <div className="flex flex-col items-center text-center ">
                     <Image
-                      src="/icon/mouthwash/extract/Hydro.png"
+                      src="/icon/mouthwash/extract/hydrosol.png"
                       alt="Q10"
-                      className="rounded-full opacity-75 my-3"
+                      className="rounded-full bg-white p-2 opacity-75 my-3"
                       width={90}
                       height={90}
                     />
@@ -357,7 +357,7 @@ const MouthwashSection = () => {
             <ManualGraph data={manualTip} />
           </div>
 
-          <div className="content-card bg-white/50 shadow-sm flex w-full max-w-md flex-col items-center gap-4 rounded-2xl p-6">
+          <div className="content-card bg-white/50 shadow-sm flex w-full max-w-full flex-col items-center gap-4 rounded-2xl p-6">
             <h2 className="text-2xl font-bold rounded-full p-3 bg-red-700  text-white">
               ช่องทางการสั่งซื้อ
             </h2>

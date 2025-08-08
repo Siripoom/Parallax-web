@@ -215,7 +215,7 @@ const ToothpasteSection = () => {
             </div>
           </div>
 
-          <div className="content-card bg-white/50 shadow-sm flex w-full max-w-md flex-col items-center gap-4 rounded-2xl p-6">
+          <div className="content-card bg-white/50 shadow-sm flex w-full max-w-full flex-col items-center gap-4 rounded-2xl p-6">
             <h2 className="text-2xl font-bold rounded-full p-3 bg-red-700  text-white">
               ช่องทางการสั่งซื้อ
             </h2>

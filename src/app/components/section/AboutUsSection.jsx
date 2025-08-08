@@ -13,15 +13,19 @@ import MaskedText from "../MaskedText"; // Import our new component
 // --- Data-Driven Approach (Recommended for Cleanliness) ---
 const proofPoints = [
   {
-    icon: <Beaker className="h-24 w-24 text-brand-green" />,
+    // Replaced 'icon' with 'image' and 'alt'
+    image: "/about/goodQuality.png", // <-- Place your Beaker icon/image here
+    alt: "Dentist-developed formula icon",
     text: "สูตรเฉพาะที่คิดค้นโดยทันตแพทย์ผู้เชี่ยวชาญของ LDC Dental",
   },
   {
-    icon: <ShieldCheck className="h-24 w-24 text-brand-green" />,
+    image: "/about/shield.png", // <-- Place your ShieldCheck icon/image here
+    alt: "Clinically proven results icon",
     text: "สูตรที่หมอใช้ในห้องฟัน และยืนยันจากคนไข้ว่าเห็นผลจริง!",
   },
   {
-    icon: <HeartPulse className="h-24 w-24 text-brand-green" />,
+    image: "/about/noBackteria.png", // <-- Place your HeartPulse icon/image here
+    alt: "Oral health benefits icon",
     text: "ช่วยลดแบคทีเรียในช่องปาก ลดการอักเสบ เหงือกและฟันแข็งแรง แผลในช่องปากหายเร็วขึ้น",
   },
 ];
@@ -68,8 +72,11 @@ const AboutUsSection = () => {
         <div className="proof-header-anim mt-12 grid grid-cols-1 md:grid-cols-3 gap-8">
           {proofPoints.map((point, index) => (
             <div key={index} className="flex flex-col items-center text-center">
-              {/* Icon is placed here */}
-              <div className="mb-4">{point.icon}</div>
+              <img
+                src={point.image}
+                alt={point.alt}
+                className="mb-4 h-35 w-35 object-contain" // Adjust size as needed
+              />
               <p className="text-gray-600 text-xl">{point.text}</p>
             </div>
           ))}
@@ -77,7 +84,7 @@ const AboutUsSection = () => {
 
         <MaskedText
           text="AFTERDENT"
-          imageSrc="/about/aboutText.JPG" // The image you want inside the text
+          imageSrc="/about/aboutText.png" // The image you want inside the text
         />
 
         <div className="about-us-image grid gap-4 md:grid-cols-2 items-center justify-center">

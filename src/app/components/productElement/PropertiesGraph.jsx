@@ -7,8 +7,8 @@ const PropertiesGraph = ({ data }) => {
     <InfoGraphicSection title="คุณสมบัติ">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-4 text-center">
         {data.map((item, index) => (
-          <div key={index} className="flex flex-col items-center">
-            <div className="relative mb-4 h-32 w-32 rounded-full overflow-hidden shadow-lg">
+          <div key={index} className="flex flex-col items-center ">
+            <div className="relative mb-4 h-32 p-5 w-32 rounded-full  bg-white overflow-hidden shadow-lg ">
               <Image
                 src={item.bgSrc} // Use the new image source from your data
                 alt={`Property: ${item.points[0]}`} // Good for SEO and accessibility
