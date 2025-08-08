@@ -5,7 +5,7 @@ import InfoGraphicSection from "./InfoGraphicSection";
 const PropertiesGraph = ({ data }) => {
   return (
     <InfoGraphicSection title="คุณสมบัติ">
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 md:gap-4 text-center">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-4 text-center">
         {data.map((item, index) => (
           <div key={index} className="flex flex-col items-center">
             <div className="relative mb-4 h-32 w-32 rounded-full overflow-hidden shadow-lg">

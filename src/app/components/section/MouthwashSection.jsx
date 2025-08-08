@@ -29,6 +29,10 @@ const propertiesData = [
     bgSrc: "/property/bacteria.png", // Path to image in /public folder
     points: ["ดับกลิ่นปากได้ยาวนาน", "ยับยั้ง Bacteria"],
   },
+  {
+    bgSrc: "/property/bacteria.png", // Path to image in /public folder
+    points: ["ใช้ง่าย ประหยัด #บีบแล้วบ้วน", "สูตรเจลอ่อนโยน"],
+  },
 ];
 
 const onlineStores = [
@@ -242,7 +246,7 @@ const MouthwashSection = () => {
           <div className="relative flex flex-col md:flex-row h-[300px] w-[300px] items-center justify-center">
             <div className="absolute inset-0 z-0 w-[300px] h-[300px]   rounded-full bg-red-300/20"></div>
             <h1 className="text-xl block md:hidden text-center  md:text-3xl font-bold">
-              AFTERDENT Cranberry Mouthwash Flavour 500 ml.
+              Cranberry Mouthwash
             </h1>
             <Image
               src="/products/mouthwash.png"
@@ -262,7 +266,7 @@ const MouthwashSection = () => {
         >
           <div className="content-card">
             <h1 className="text-2xl sm:text-3xl md:text-3xl font-bold hidden md:block md:text-3xl font-bold">
-              AFTERDENT Cranberry Mouthwash Flavour 500 ml.
+              Cranberry Mouthwash
             </h1>
           </div>
 
@@ -285,9 +289,12 @@ const MouthwashSection = () => {
                     />
                     <div className="group-card bg-white rounded-2xl p-3 shadow-md ">
                       <p className="text-sm text-red-700 font-bold">
-                        Coenzyme Q10
+                        Mix Berry
                       </p>
-                      <p>เพิ่มความชุ่มชื้น เร่งสมานแผลและสร้างคอลลาเจน</p>
+                      <p>
+                        รวมสารสกัดจาก 5 เบอร์รี่ อุดมด้วยวิตามินซีและ
+                        สารต้านอนุมูลอิสระ ช่วยลดเชื้อแบคทีเรียในช่อง ปาก
+                      </p>
                     </div>
                   </div>
                   <div className="flex flex-col items-center text-center">
@@ -300,9 +307,12 @@ const MouthwashSection = () => {
                     />
                     <div className="group-card bg-white rounded-2xl p-3 shadow-md ">
                       <p className="text-sm text-red-700 font-bold">
-                        ALOE VERA EXTRACT
+                        Coenzyme Q10 & Aloe Vera
                       </p>
-                      <p>ลดการอักเสบ ปลอบประโลมเนื้อเยื่อ ในช่องปาก</p>
+                      <p>
+                        ฟื้นฟูเซลล์ผิว ลดอักเสบ เพิ่มความชุ่มชื้น
+                        กระตุ้นคอลลาเจน และสมานแผลได้เร็วขึ้น
+                      </p>
                     </div>
                   </div>
                   <div className="flex flex-col items-center text-center">
@@ -315,9 +325,12 @@ const MouthwashSection = () => {
                     />
                     <div className="group-card bg-white rounded-2xl p-3 shadow-md ">
                       <p className="text-sm text-red-700 font-bold">
-                        CRANBERRY EXTRACT
+                        Kalident 100 (Hydroxyapatite)
                       </p>
-                      <p>ช่วยยับยั้งการเกาะของแบคทีเรียบนผิวฟัน</p>
+                      <p>
+                        ฟื้นฟูและเติมเต็มผิวฟันที่เสียหาย เสริมเกราะให้ แข็งแรง
+                        ลดเสียวฟัน ป้องกันฟันผุ
+                      </p>
                     </div>
                   </div>
                   <div className="flex flex-col items-center text-center ">
@@ -330,9 +343,9 @@ const MouthwashSection = () => {
                     />
                     <div className="group-card bg-white rounded-2xl p-3 shadow-md ">
                       <p className="text-sm text-red-700 font-bold">
-                        HYDROXYAPATITE
+                        Hydrosol Fresh Cool
                       </p>
-                      <p>ลดเสียวฟัน และเสริมความแข็งแรงให้ ผิวเคลือบฟัน</p>
+                      <p>ให้ความเย็น สดชื่นยาวนานโดยไม่แสบปาก</p>
                     </div>
                   </div>
                 </div>

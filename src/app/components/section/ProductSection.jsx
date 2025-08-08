@@ -127,7 +127,7 @@ const ProductSection = () => {
             <ProductCard
               productUrl="https://shopee.co.th/%E0%B8%81%E0%B8%A5%E0%B9%88%E0%B8%AD%E0%B8%87%E0%B9%83%E0%B8%AA%E0%B9%88%E0%B8%A3%E0%B8%B5%E0%B9%80%E0%B8%97%E0%B8%99%E0%B9%80%E0%B8%99%E0%B8%AD%E0%B8%A3%E0%B9%8C-%E0%B9%81%E0%B8%A5%E0%B8%B0%E0%B8%AD%E0%B8%B8%E0%B8%9B%E0%B8%81%E0%B8%A3%E0%B8%93%E0%B9%8C%E0%B8%88%E0%B8%B1%E0%B8%94%E0%B8%9F%E0%B8%B1%E0%B8%99%E0%B9%83%E0%B8%AA-AFTERDENT-%E0%B8%9E%E0%B8%A3%E0%B8%B5%E0%B9%80%E0%B8%A1%E0%B8%B5%E0%B8%A2%E0%B8%A1-i.135011894.24413737742"
               imageSrc="/products/retainerWash.png"
-              title="กล่องใส่รีเทนเนอร์และอุปกรณ์จัดฟันใส AFTERDENT พรีเมี่ยม"
+              title="กล่องใส่รีเทนเนอร์และอุปกรณ์จัดฟันใส AFTERDENT พรีเมียม"
               imageClassName="w-70"
             />
           </div>
@@ -135,7 +135,7 @@ const ProductSection = () => {
             <ProductCard
               productUrl="https://shopee.co.th/%E0%B8%81%E0%B8%A5%E0%B9%88%E0%B8%AD%E0%B8%87%E0%B9%81%E0%B8%8A%E0%B9%88%E0%B8%A3%E0%B8%B5%E0%B9%80%E0%B8%97%E0%B8%99%E0%B9%80%E0%B8%99%E0%B8%AD%E0%B8%A3%E0%B9%8C-AFTERDENT-%E0%B8%9E%E0%B8%A3%E0%B8%B5%E0%B9%80%E0%B8%A1%E0%B8%B5%E0%B9%88%E0%B8%A2%E0%B8%A1-%E0%B8%AA%E0%B8%B5%E0%B8%94%E0%B8%B3-%E0%B8%9F%E0%B9%89%E0%B8%B2-%E0%B8%AA%E0%B9%89%E0%B8%A1--i.135011894.26624718928"
               imageSrc="/products/retainerWaterBox.png"
-              title="กล่องแช่รีเทนเนอร์ AFTERDENT พรีเมี่ยม"
+              title="กล่องแช่รีเทนเนอร์ AFTERDENT พรีเมียม"
               imageClassName="w-70"
             />
           </div>
