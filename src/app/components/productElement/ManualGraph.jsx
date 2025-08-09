@@ -1,90 +1,46 @@
 "use client";
 
-import { useState, useEffect, useRef } from "react";
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useRef } from "react";
 import InfoGraphicSection from "./InfoGraphicSection";
-
-gsap.registerPlugin(ScrollTrigger);
+import { RotateCcw } from "lucide-react";
+// Import our new custom hook
+import { useVideoSequence } from "./useVideoSequence";
 
 const ManualGraph = ({ data }) => {
-  const [activeVideoIndex, setActiveVideoIndex] = useState(0);
-  const videoRefs = useRef([]);
   const sectionRef = useRef(null);
 
-  useEffect(() => {
-    // This effect sets up the event listeners for the video sequence
-    const videos = videoRefs.current;
-
-    const handleVideoEnd = (index) => {
-      // Move to the next video, looping back to the start
-      const nextIndex = (index + 1) % videos.length;
-      setActiveVideoIndex(nextIndex);
-    };
-
-    videos.forEach((video, index) => {
-      if (video) {
-        // We bind the index to the handler
-        const handler = () => handleVideoEnd(index);
-        video.addEventListener("ended", handler);
-
-        // Cleanup function to remove the listener
-        return () => {
-          video.removeEventListener("ended", handler);
-        };
-      }
-    });
-  }, [data.length]); // Rerun setup if the number of videos changes
-
-  useEffect(() => {
-    // This effect controls which video is playing
-    const videos = videoRefs.current;
-    videos.forEach((video, index) => {
-      if (video) {
-        if (index === activeVideoIndex) {
-          // Play the active video
-          video
-            .play()
-            .catch((error) => console.log("Autoplay was prevented:", error));
-        } else {
-          // Pause and reset all other videos
-          video.pause();
-          video.currentTime = 0;
-        }
-      }
-    });
-  }, [activeVideoIndex]); // Rerun whenever the active video index changes
-
-  useEffect(() => {
-    // This effect starts the sequence when the component scrolls into view
-    const trigger = ScrollTrigger.create({
-      trigger: sectionRef.current,
-      start: "top 70%",
-      onEnter: () => setActiveVideoIndex(0), // Start the sequence by setting the first video as active
-      onLeaveBack: () => {
-        // Reset when scrolling up past it
-        setActiveVideoIndex(0);
-        videoRefs.current.forEach((v) => v && v.pause());
-      },
-    });
-    return () => trigger.kill(); // Cleanup the trigger
-  }, []);
+  // --- Use the custom hook to manage all the state and logic ---
+  const { activeVideoIndex, videoRefs, handleReplay } = useVideoSequence(
+    sectionRef,
+    data.length
+  );
 
   return (
     <div ref={sectionRef}>
-      <InfoGraphicSection title="วิธีใช้งาน">
+      <InfoGraphicSection
+        title="วิธีใช้งาน"
+        titleExtra={
+          <button
+            onClick={handleReplay}
+            className="group flex items-center gap-2 rounded-full bg-red-700 cursor-pointer px-4 py-2 text-sm font-semibold text-white shadow-lg transition-transform hover:scale-105 active:scale-95"
+          >
+            <RotateCcw className="h-4 w-4 transition-transform group-hover:rotate-[-180deg]" />
+            เริ่มเล่นใหม่
+          </button>
+        }
+      >
         <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
           {data.map((item, index) => (
             <div key={index} className="flex flex-col items-center text-center">
               {/* Video Container */}
               <div className="w-full overflow-hidden rounded-2xl shadow-lg">
                 <video
-                  // This callback populates our refs array
+                  // The ref callback populates the array for our hook
                   ref={(el) => (videoRefs.current[index] = el)}
                   src={item.videoSrc}
                   muted
                   playsInline
-                  className={`h-full  w-full object-cover transition-all duration-500 ${
+                  className={`h-full w-full object-cover transition-all duration-500 ${
                     activeVideoIndex === index
                       ? "opacity-100 scale-105"
                       : "opacity-75 scale-100"
