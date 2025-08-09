@@ -146,8 +146,8 @@ const ToothpasteSection = () => {
                       width={90}
                       height={90}
                     />
-                    <p className="text-sm text-red-700 font-bold">Mix Berry</p>
-                    <p>
+                    <p className="text-xl text-red-700 font-bold">Mix Berry</p>
+                    <p className="text-lg my-2">
                       รวมสารสกัดจาก 5 เบอร์รี่ อุดมด้วยวิตามินซีและ
                       สารต้านอนุมูลอิสระ ช่วยลดเชื้อแบคทีเรียในช่อง
                     </p>
@@ -160,10 +160,10 @@ const ToothpasteSection = () => {
                       width={90}
                       height={90}
                     />
-                    <p className="text-sm text-red-700 font-bold">
+                    <p className="text-xl text-red-700 font-bold">
                       Coenzyme Q10 & Aloe Vera
                     </p>
-                    <p>
+                    <p className="text-lg my-2">
                       ฟื้นฟูเซลล์ผิว ลดการอักเสบ เพิ่มความชุ่มชื้น
                       กระตุ้นคอลลาเจน และสมานแผลได้เร็วขึ้น
                     </p>
@@ -176,10 +176,10 @@ const ToothpasteSection = () => {
                       width={90}
                       height={90}
                     />
-                    <p className="text-sm text-red-700 font-bold">
+                    <p className="text-xl text-red-700 font-bold">
                       Potassium Nitrate
                     </p>
-                    <p>ลดอาการเสียวฟันทันที</p>
+                    <p className="text-lg my-2">ลดอาการเสียวฟันทันที</p>
                   </div>
                   <div className="flex flex-col items-center text-center">
                     <Image
@@ -189,10 +189,10 @@ const ToothpasteSection = () => {
                       width={90}
                       height={90}
                     />
-                    <p className="text-sm text-red-700 font-bold">
+                    <p className="text-xl text-red-700 font-bold">
                       Sodium Chloride
                     </p>
-                    <p>ช่วยขจัดคราบอาหาร คราบพลัค</p>
+                    <p className="text-lg my-2">ช่วยขจัดคราบอาหาร คราบพลัค</p>
                   </div>
                   <div className="flex flex-col items-center text-center">
                     <Image
@@ -202,10 +202,10 @@ const ToothpasteSection = () => {
                       width={90}
                       height={90}
                     />
-                    <p className="text-sm text-red-700 font-bold">
+                    <p className="text-xl text-red-700 font-bold">
                       Fluoride 1,500 ppm
                     </p>
-                    <p>
+                    <p className="text-lg my-2">
                       ฟลูออไรด์สูงสุด ที่ช่วยซ่อมแซมผิวฟัน เสริมความ แข็งแรง
                       และป้องกันฟันผุ ปราศจากสารเคมีที่เป็นอันตรายต่อ ช่องปาก
                     </p>

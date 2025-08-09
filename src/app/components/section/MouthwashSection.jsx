@@ -15,6 +15,7 @@ gsap.registerPlugin(ScrollTrigger);
 const propertiesData = [
   {
     bgSrc: "/property/fresh.png", // Path to image in /public folder
+    name: "กลุ่มดูแลฟัน",
     points: [
       "ลดเสียวฟันทันทีและแก้ให้หายขาด",
       "ซ่อมแซมและเคลือบผิวฟันให้แข็งแรงป้องกันฟันผุ",
@@ -23,14 +24,17 @@ const propertiesData = [
   },
   {
     bgSrc: "/property/protect.png", // Path to image in /public folder
+    name: "กลุ่มรักษาแผล",
     points: ["ลดอักเสบ เร่งสมานแผล", "กระตุ้นคอลลาเจน"],
   },
   {
     bgSrc: "/property/bacteria.png", // Path to image in /public folder
+    name: "กลุ่มยับยั้งแบคทีเรีย กลิ่นหอม",
     points: ["ดับกลิ่นปากได้ยาวนาน", "ยับยั้ง Bacteria"],
   },
   {
     bgSrc: "/property/save.png", // Path to image in /public folder
+    name: "กลุ่มคุ้มค่า คุ้มราคาใช้งานสะดวก",
     points: ["ใช้ง่าย ประหยัด #บีบแล้วบ้วน", "สูตรเจลอ่อนโยน"],
   },
 ];
@@ -288,10 +292,10 @@ const MouthwashSection = () => {
                       height={90}
                     />
                     <div className="group-card bg-white rounded-2xl p-3 shadow-md ">
-                      <p className="text-sm text-red-700 font-bold">
+                      <p className="text-xl text-red-700 font-bold">
                         Mix Berry
                       </p>
-                      <p>
+                      <p className="text-lg my-2">
                         รวมสารสกัดจาก 5 เบอร์รี่ อุดมด้วยวิตามินซีและ
                         สารต้านอนุมูลอิสระ ช่วยลดเชื้อแบคทีเรียในช่อง ปาก
                       </p>
@@ -306,10 +310,10 @@ const MouthwashSection = () => {
                       height={90}
                     />
                     <div className="group-card bg-white rounded-2xl p-3 shadow-md ">
-                      <p className="text-sm text-red-700 font-bold">
+                      <p className="text-xl my-2 text-red-700 font-bold">
                         Coenzyme Q10 & Aloe Vera
                       </p>
-                      <p>
+                      <p className="text-lg my-2">
                         ฟื้นฟูเซลล์ผิว ลดอักเสบ เพิ่มความชุ่มชื้น
                         กระตุ้นคอลลาเจน และสมานแผลได้เร็วขึ้น
                       </p>
@@ -324,10 +328,10 @@ const MouthwashSection = () => {
                       height={90}
                     />
                     <div className="group-card bg-white rounded-2xl p-3 shadow-md ">
-                      <p className="text-sm text-red-700 font-bold">
+                      <p className="text-xl my-2 text-red-700 font-bold">
                         Kalident 100 (Hydroxyapatite)
                       </p>
-                      <p>
+                      <p className="text-lg my-2">
                         ฟื้นฟูและเติมเต็มผิวฟันที่เสียหาย เสริมเกราะให้ แข็งแรง
                         ลดเสียวฟัน ป้องกันฟันผุ
                       </p>
@@ -342,10 +346,12 @@ const MouthwashSection = () => {
                       height={90}
                     />
                     <div className="group-card bg-white rounded-2xl p-3 shadow-md ">
-                      <p className="text-sm text-red-700 font-bold">
+                      <p className="text-xl my-2 text-red-700 font-bold">
                         Hydrosol Fresh Cool
                       </p>
-                      <p>ให้ความเย็น สดชื่นยาวนานโดยไม่แสบปาก</p>
+                      <p className="text-md my-2">
+                        ให้ความเย็น สดชื่นยาวนานโดยไม่แสบปาก
+                      </p>
                     </div>
                   </div>
                 </div>

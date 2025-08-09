@@ -19,10 +19,11 @@ const PropertiesGraph = ({ data }) => {
 
             {/* The bullet points remain the same */}
             <ul className="list-disc list-inside bg-white rounded-2xl p-3 shadow-md text-left text-gray-700 space-y-1 w-full px-4">
+              <p className="text-2xl font-bold text-center">{item.name}</p>
               {item.points.map((point, i) => (
                 <li
                   key={i}
-                  className="text-sm sm:text-base md:text-lg leading-relaxed"
+                  className="text-sm sm:text-base md:text-lg m-3 leading-relaxed"
                 >
                   {point}
                 </li>
