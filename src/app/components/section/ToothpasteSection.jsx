@@ -289,7 +289,7 @@ const ToothpasteSection = () => {
             className="parallax-bubble absolute hidden lg:block  top-1/4   left-5  z-0"
           />
 
-          <div className="absolute bottom-0 z-5 flex items-center">
+          <div className="absolute  bottom-[-120px] lg:bottom-8 z-5  flex items-center">
             <Image
               src="/slogan/alcohol.png"
               alt="Alcohol Free"
@@ -315,9 +315,9 @@ const ToothpasteSection = () => {
               alt="Toothpaste and box"
               width={250}
               height={450}
-              className="relative z-10 drop-shadow-lg"
+              className="relative z-10 bottom-10 md:bottom-20 drop-shadow-lg"
             />
-            <div className="absolute bottom-[-80px] z-0 h-10 w-4/5  rounded-full bg-black/60 blur-xl"></div>
+            <div className="absolute bottom-[-80px] z-0 h-10  w-4/5  rounded-full bg-black/60 blur-xl"></div>
           </div>
         </div>
       </div>

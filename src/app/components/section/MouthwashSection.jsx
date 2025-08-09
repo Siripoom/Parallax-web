@@ -367,7 +367,7 @@ const MouthwashSection = () => {
             <h2 className="text-2xl font-bold rounded-full p-3 bg-red-700  text-white">
               ช่องทางการสั่งซื้อ
             </h2>
-            <div className="grid lg:grid-cols-2 gap-4">
+            <div className="grid grid-cols-2 gap-4">
               {onlineStores.map((store) => (
                 <StoreButton key={store.alt} {...store} />
               ))}
