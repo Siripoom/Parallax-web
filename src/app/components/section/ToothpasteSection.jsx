@@ -128,7 +128,7 @@ const ToothpasteSection = () => {
         >
           <div className="content-card-tp">
             <h1 className="text-3xl hidden md:block font-bold">
-              Afterdent Cranberry Delight Toothpaste
+              Cranberry Delight Toothpaste
             </h1>
           </div>
 

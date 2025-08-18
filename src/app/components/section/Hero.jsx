@@ -67,7 +67,7 @@ const Hero = () => {
           alt="Afterdent product collage"
           width={30}
           height={30}
-          sizes="100vw"
+          sizes="80vw"
           className="w-100 lg:w-full rounded-xl"
         />
         <p className="mt-4 text-xl md:text-5xl font-semibold drop-shadow-md">

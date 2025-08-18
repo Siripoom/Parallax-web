@@ -82,37 +82,79 @@ const AboutUsSection = () => {
           ))}
         </div>
 
-        <MaskedText
-          text="AFTERDENT"
-          imageSrc="/about/aboutText.png" // The image you want inside the text
+        <Image
+          src="/logo/logo.PNG"
+          alt="Dentist with patient"
+          width={1200}
+          height={0}
+          className="rounded-lg w-full h-full my-5  ml-auto"
         />
 
-        <div className="about-us-image grid gap-4 md:grid-cols-2 items-center justify-center">
-          <div>
-            <Image
-              src="/about/presenter.jpg"
-              alt="Dentist with patient"
-              width={400}
-              height={0}
-              className="rounded-lg w-full h-full  shadow-lg ml-auto"
-            />
-          </div>
-          <div className="flex flex-col gap-3">
-            <Image
-              src="/about/Dentist.jpg"
-              alt="Dentist with patient"
-              width={400}
-              height={400}
-              className="rounded-lg w-full  shadow-lg ml-auto"
-            />
-            <Image
-              src="/about/smile.jpg"
-              alt="Dentist with patient"
-              width={400}
-              height={400}
-              className="rounded-lg w-full  shadow-lg ml-auto"
-            />
-          </div>
+        <div className="about-us-image grid gap-4 md:grid-cols-3 items-center justify-center">
+          <Image
+            src="/about/customer1.jpg"
+            alt="Dentist with patient"
+            width={400}
+            height={400}
+            className="rounded-lg w-full  shadow-lg ml-auto"
+          />
+
+          <Image
+            src="/about/customer5.jpg"
+            alt="Dentist with patient"
+            width={400}
+            height={400}
+            className="rounded-lg w-full  shadow-lg ml-auto"
+          />
+          <Image
+            src="/about/customer6.jpg"
+            alt="Dentist with patient"
+            width={400}
+            height={400}
+            className="rounded-lg w-full  shadow-lg ml-auto"
+          />
+        </div>
+
+        <div className="about-us-image grid gap-4 my-3 md:grid-cols-2 items-center justify-center">
+          <Image
+            src="/about/Dentist.jpg"
+            alt="Dentist with patient"
+            width={400}
+            height={400}
+            className="rounded-lg w-full  shadow-lg ml-auto"
+          />
+
+          <Image
+            src="/about/promote1.jpg"
+            alt="Dentist with patient"
+            width={400}
+            height={400}
+            className="rounded-lg w-full  shadow-lg ml-auto"
+          />
+        </div>
+        <div className="about-us-image grid gap-4 md:grid-cols-3 items-center justify-center">
+          <Image
+            src="/about/smile.jpg"
+            alt="Dentist with patient"
+            width={400}
+            height={400}
+            className="rounded-lg w-full  shadow-lg ml-auto"
+          />
+
+          <Image
+            src="/about/dentist2.jpg"
+            alt="Dentist with patient"
+            width={400}
+            height={400}
+            className="rounded-lg w-full  shadow-lg ml-auto"
+          />
+          <Image
+            src="/about/dentist3.jpg"
+            alt="Dentist with patient"
+            width={400}
+            height={400}
+            className="rounded-lg w-full  shadow-lg ml-auto"
+          />
         </div>
 
         {/* --- Value Proposition Text --- */}
@@ -150,8 +192,8 @@ const AboutUsSection = () => {
               className="rounded-lg shadow-lg ml-auto"
             />
             <div className="flex flex-col justify-center items-center">
-              <h3 className="text-3xl font-bold  mb-8">
-                <span className="text-brand-green text-3xl">
+              <h3 className="text-3xl font-bold text-start  mb-8">
+                <span className="text-3xl">
                   AFTERDENT Cranberry Delight Toothpaste
                 </span>
               </h3>

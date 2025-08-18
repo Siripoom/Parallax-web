@@ -15,7 +15,6 @@ gsap.registerPlugin(ScrollTrigger);
 const propertiesData = [
   {
     bgSrc: "/property/fresh.png", // Path to image in /public folder
-    name: "กลุ่มดูแลฟัน",
     points: [
       "ลดเสียวฟันทันทีและแก้ให้หายขาด",
       "ซ่อมแซมและเคลือบผิวฟันให้แข็งแรงป้องกันฟันผุ",
@@ -24,17 +23,14 @@ const propertiesData = [
   },
   {
     bgSrc: "/property/protect.png", // Path to image in /public folder
-    name: "กลุ่มรักษาแผล",
     points: ["ลดอักเสบ เร่งสมานแผล", "กระตุ้นคอลลาเจน"],
   },
   {
     bgSrc: "/property/bacteria.png", // Path to image in /public folder
-    name: "กลุ่มยับยั้งแบคทีเรีย กลิ่นหอม",
     points: ["ดับกลิ่นปากได้ยาวนาน", "ยับยั้ง Bacteria"],
   },
   {
     bgSrc: "/property/save.png", // Path to image in /public folder
-    name: "กลุ่มคุ้มค่า คุ้มราคาใช้งานสะดวก",
     points: ["ใช้ง่าย ประหยัด #บีบแล้วบ้วน", "สูตรเจลอ่อนโยน"],
   },
 ];
