@@ -63,9 +63,25 @@ const AboutUsSection = () => {
           <h2 className="text-5xl font-extrabold uppercase text-brand-orange">
             Get To Know Us
           </h2>
+          <div className="flex justify-center flex-col md:flex-row gap-5 items-center my-5">
+            {/* --- Stats Section --- */}
+            <Image
+              src="/about/ldcProve.jpg"
+              alt="Dentist with patient"
+              width={330}
+              height={200}
+              className="rounded-lg justify-center items-center shadow-lg "
+            />
+            <Image
+              src="/about/ldcProve2.jpg"
+              alt="Dentist with patient"
+              width={800}
+              height={200}
+              className="rounded-lg justify-center w-full items-center shadow-lg "
+            />
+          </div>
         </div>
 
-        {/* --- Stats Section --- */}
         <h2 className="text-3xl font-extrabold uppercase text-brand-orange my-15">
           ผ่านการพิสูจน์คุณภาพจาก LDC Dental
         </h2>
@@ -117,7 +133,7 @@ const AboutUsSection = () => {
 
         <div className="about-us-image grid gap-4 my-3 md:grid-cols-2 items-center justify-center">
           <Image
-            src="/about/Dentist.jpg"
+            src="/about/customer7.jpg"
             alt="Dentist with patient"
             width={400}
             height={400}
@@ -125,7 +141,7 @@ const AboutUsSection = () => {
           />
 
           <Image
-            src="/about/promote1.jpg"
+            src="/about/promote4.jpg"
             alt="Dentist with patient"
             width={400}
             height={400}
