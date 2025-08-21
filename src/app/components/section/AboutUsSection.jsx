@@ -63,23 +63,6 @@ const AboutUsSection = () => {
           <h2 className="text-5xl font-extrabold uppercase text-brand-orange">
             Get To Know Us
           </h2>
-          <div className="flex justify-center flex-col md:flex-row gap-5 items-center my-5">
-            {/* --- Stats Section --- */}
-            <Image
-              src="/about/ldcProve.jpg"
-              alt="Dentist with patient"
-              width={330}
-              height={200}
-              className="rounded-lg justify-center items-center shadow-lg "
-            />
-            <Image
-              src="/about/ldcProve2.jpg"
-              alt="Dentist with patient"
-              width={800}
-              height={200}
-              className="rounded-lg justify-center w-full items-center shadow-lg "
-            />
-          </div>
         </div>
 
         <h2 className="text-3xl font-extrabold uppercase text-brand-orange my-15">
@@ -106,71 +89,43 @@ const AboutUsSection = () => {
           className="rounded-lg w-full h-full my-5  ml-auto"
         />
 
-        <div className="about-us-image grid gap-4 md:grid-cols-3 items-center justify-center">
-          <Image
-            src="/about/customer1.jpg"
-            alt="Dentist with patient"
-            width={400}
-            height={400}
-            className="rounded-lg w-full  shadow-lg ml-auto"
-          />
-
-          <Image
-            src="/about/customer5.jpg"
-            alt="Dentist with patient"
-            width={400}
-            height={400}
-            className="rounded-lg w-full  shadow-lg ml-auto"
-          />
-          <Image
-            src="/about/customer6.jpg"
-            alt="Dentist with patient"
-            width={400}
-            height={400}
-            className="rounded-lg w-full  shadow-lg ml-auto"
-          />
-        </div>
-
-        <div className="about-us-image grid gap-4 my-3 md:grid-cols-2 items-center justify-center">
-          <Image
-            src="/about/customer7.jpg"
-            alt="Dentist with patient"
-            width={400}
-            height={400}
-            className="rounded-lg w-full  shadow-lg ml-auto"
-          />
-
-          <Image
-            src="/about/promote4.jpg"
-            alt="Dentist with patient"
-            width={400}
-            height={400}
-            className="rounded-lg w-full  shadow-lg ml-auto"
-          />
-        </div>
-        <div className="about-us-image grid gap-4 md:grid-cols-3 items-center justify-center">
-          <Image
-            src="/about/smile.jpg"
-            alt="Dentist with patient"
-            width={400}
-            height={400}
-            className="rounded-lg w-full  shadow-lg ml-auto"
-          />
-
-          <Image
-            src="/about/dentist2.jpg"
-            alt="Dentist with patient"
-            width={400}
-            height={400}
-            className="rounded-lg w-full  shadow-lg ml-auto"
-          />
-          <Image
-            src="/about/dentist3.jpg"
-            alt="Dentist with patient"
-            width={400}
-            height={400}
-            className="rounded-lg w-full  shadow-lg ml-auto"
-          />
+        <div className="about-us-image grid gap-4 md:grid-cols-3 items-center justify-center overflow-hidden min-w-0 min-h-0">
+          <div className="h-full flex items-stretch min-w-0 min-h-0">
+            <Image
+              src="/about/ldcProve.jpg"
+              alt="Dentist with patient"
+              width={400}
+              height={400}
+              className="rounded-lg w-full h-full max-w-full max-h-full object-cover shadow-lg"
+              style={{ aspectRatio: "1/1" }}
+            />
+          </div>
+          <div className="flex flex-col gap-4 h-full justify-between min-w-0 min-h-0">
+            <Image
+              src="/about/ldcProve2.jpg"
+              alt="Dentist with patient"
+              width={400}
+              height={400}
+              className="rounded-lg w-full h-full max-w-full max-h-full object-cover shadow-lg flex-1"
+            />
+            <Image
+              src="/about/ldcProve4.jpg"
+              alt="Dentist with patient"
+              width={400}
+              height={400}
+              className="rounded-lg w-full h-full max-w-full max-h-full object-cover shadow-lg flex-1"
+            />
+          </div>
+          <div className="h-full flex items-stretch min-w-0 min-h-0">
+            <Image
+              src="/about/ldcProve3.jpg"
+              alt="Dentist with patient"
+              width={400}
+              height={400}
+              className="rounded-lg w-full h-full max-w-full max-h-full object-cover shadow-lg"
+              style={{ aspectRatio: "1/1" }}
+            />
+          </div>
         </div>
 
         {/* --- Value Proposition Text --- */}

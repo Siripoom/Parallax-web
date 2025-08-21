@@ -68,10 +68,10 @@ const Hero = () => {
           width={30}
           height={30}
           sizes="80vw"
-          className="w-100 lg:w-full rounded-xl"
+          className="w-100 lg:w-full rounded-xln"
         />
         <p className="mt-4 text-xl md:text-5xl font-semibold drop-shadow-md">
-          สูตรที่หมอใช้ในห้องฟัน!
+          สูตรที่หมอใช้ในห้องฟัน
         </p>
       </div>
     </section>
