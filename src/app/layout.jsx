@@ -11,7 +11,7 @@ const ibmPlexSansThai = IBM_Plex_Sans_Thai({
 });
 
 export const metadata = {
-  title: "AfterDent | Modern Oral Care",
+  title: "AfterDent | สูตรที่หมอใช้ในห้องฟัน",
   description: "A modern solution for a brighter smile.",
 };
 
